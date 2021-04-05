@@ -54,5 +54,5 @@ gradlew.bat umlet
 16. Τα υλικά και η θερμιδική τους αξία θα καταχωρούνται από το διαχειριστή του συστήματος.
 
 
-[Διάγραμμα περιπτώσεων χρήσης](docs/uml/requirements/use_case_uml_diagram.uxf)
+[Διάγραμμα περιπτώσεων χρήσης](uml/requirements/use_case_uml_diagram.png)
 
