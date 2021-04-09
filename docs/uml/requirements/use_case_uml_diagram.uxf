@@ -48,8 +48,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>800</x>
-      <y>620</y>
+      <x>790</x>
+      <y>700</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -59,12 +59,12 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>810</x>
-      <y>710</y>
+      <x>720</x>
+      <y>800</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>Υποβολή συνταγών</panel_attributes>
+    <panel_attributes>Διαχείριση συνταγών</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -138,21 +138,33 @@
     <coordinates>
       <x>450</x>
       <y>500</y>
-      <w>370</w>
-      <h>170</h>
+      <w>360</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;350.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;340.0;230.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>440</x>
       <y>510</y>
-      <w>390</w>
-      <h>250</h>
+      <w>300</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;370.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;280.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>590</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+includes</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
 </diagram>
