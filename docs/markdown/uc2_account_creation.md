@@ -8,7 +8,7 @@
 | Μετασυνθήκες | Ο χρήστης γίνεται μέλος της εφαρμογής. |
 
 ### Διάγραμμα δραστηριότητας
-![Διάγραμμα δραστηριότητας - Άνοιγμα Λογαριασμού](uml/requirements/account_creation_activity_diagram.png)
+![](uml/requirements/account_creation_activity_diagram.png)
 
 
 
