@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Recipe {
 
+    public static int idCounter = 0;
     private int id;
     private String name;
     private String courseType;
@@ -13,6 +14,7 @@ public class Recipe {
     private ArrayList<RecipeIngredient> ingredients;
     private User user;
     private Rating rating;
+    private float totalCalories;
 
     public Recipe(int id, String name, String courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user) {
         this.id = id;
@@ -23,6 +25,7 @@ public class Recipe {
         this.steps = steps;
         this.ingredients = ingredients;
         this.user = user;
+        this.totalCalories = 0;
     }
 
     public int getId() {
@@ -96,4 +99,12 @@ public class Recipe {
     public void setRating(Rating rating) {
         this.rating = rating;
     }
+
+    public void calorieCalculation(){
+        for (RecipeIngredient ing : this.ingredients){
+            this.totalCalories += ing.calorieCalculation();
+        }
+    }
+
+
 }
