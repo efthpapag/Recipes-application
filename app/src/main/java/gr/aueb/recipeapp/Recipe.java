@@ -14,7 +14,7 @@ public class Recipe {
     private ArrayList<RecipeIngredient> ingredients;
     private User user;
     private Rating rating;
-    private float totalCalories;
+    private float TotalCalories;
 
     public Recipe(int id, String name, String courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user) {
         this.id = id;
@@ -25,7 +25,7 @@ public class Recipe {
         this.steps = steps;
         this.ingredients = ingredients;
         this.user = user;
-        this.totalCalories = 0;
+        this.TotalCalories = 0;
     }
 
     public int getId() {
@@ -100,11 +100,9 @@ public class Recipe {
         this.rating = rating;
     }
 
-    public void calorieCalculation(){
+    public void CalorieCalculation(){
         for (RecipeIngredient ing : this.ingredients){
-            this.totalCalories += ing.calorieCalculation();
+            this.TotalCalories += ing.CalorieCalculation();
         }
     }
-
-
 }
