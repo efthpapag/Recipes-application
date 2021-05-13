@@ -4,23 +4,23 @@ import java.util.Date;
 
 public class Rating {
 
-    private RatingLevels rating;
+    private RatingLevel rating;
     private Date date;
     private User user;
     private Recipe recipe;
 
-    public Rating(RatingLevels rating, Date date, User user, Recipe recipe) {
+    public Rating(RatingLevel rating, Date date, User user, Recipe recipe) {
         this.rating = rating;
         this.date = date;
         this.user = user;
         this.recipe = recipe;
     }
 
-    public RatingLevels getRating() {
+    public RatingLevel getRating() {
         return rating;
     }
 
-    public void setRating(RatingLevels rating) {
+    public void setRating(RatingLevel rating) {
         this.rating = rating;
     }
 

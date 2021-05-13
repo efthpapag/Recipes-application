@@ -1,6 +1,6 @@
 package gr.aueb.recipeapp;
 
-public enum RatingLevels {
+public enum RatingLevel {
 
     Positive,
     Neutral,
