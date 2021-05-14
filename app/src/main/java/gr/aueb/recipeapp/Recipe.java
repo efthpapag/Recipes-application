@@ -7,6 +7,7 @@ import static gr.aueb.recipeapp.RatingLevel.Positive;
 
 public class Recipe{
 
+    public static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>();
     public static int idCounter = 0;
     private int id;
     private String name;
@@ -94,9 +95,17 @@ public class Recipe{
         this.user = user;
     }
 
-    public void CalorieCalculation(){
+    public float getTotalCalories() {
+        return TotalCalories;
+    }
+
+    public void setTotalCalories(float totalCalories) {
+        TotalCalories = totalCalories;
+    }
+
+    public void calorieCalculation(){
         for (RecipeIngredient ing : this.ingredients){
-            this.TotalCalories += ing.CalorieCalculation();
+            this.TotalCalories += ing.calorieCalculation();
         }
     }
 

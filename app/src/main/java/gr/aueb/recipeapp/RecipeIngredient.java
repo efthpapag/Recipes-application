@@ -26,7 +26,7 @@ public class RecipeIngredient {
         this.ingredientType = ingredientType;
     }
 
-    public float CalorieCalculation(){
+    public float calorieCalculation(){
         return quantity * ingredientType.getCalories();
     }
 

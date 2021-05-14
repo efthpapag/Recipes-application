@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class User {
 
-    public static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>();
     private String username;
     private String password;
     private ArrayList<Recipe> recipesPublished;
@@ -65,15 +65,17 @@ public class User {
     public void publish(String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients){
         Recipe r = new Recipe(Recipe.idCounter, name, courseType, prepTime, portion, steps, ingredients, this);
         this.recipesPublished.add(r);
-        User.allRecipes.add(r);
+        Recipe.allRecipes.add(r);
         Recipe.idCounter++;
     }
 
     public void remove(int id){
-        for(Recipe r : recipesPublished){
-            if(r.getId() == id){
-                recipesPublished.remove(r);
-                User.allRecipes.remove(r);
+        Iterator<Recipe> iter = this.recipesPublished.iterator();
+        while (iter.hasNext()){
+            Recipe r = iter.next();
+            if (r.getId() == id){
+                iter.remove();
+                Recipe.allRecipes.remove(r);
             }
         }
     }
@@ -84,13 +86,13 @@ public class User {
                 remove(r.getId());
                 Recipe recipe = new Recipe(id, name, courseType, prepTime, portion, steps, ingredients, this);
                 this.recipesPublished.add(recipe);
-                User.allRecipes.add(recipe);
+                Recipe.allRecipes.add(recipe);
             }
         }
     }
 
     public void rate(int id, RatingLevel level){
-        for (Recipe r : this.recipesPublished){
+        for (Recipe r : Recipe.allRecipes){
             if (r.getId() == id){
                 this.ratings.put(id, new Rating(level, new Date(), this, r));
                 break;
@@ -98,9 +100,9 @@ public class User {
         }
     }
 
-    public void search(int time, ArrayList<RecipeIngredient> availableIngredients, String courseType){
+    public ArrayList<Recipe> search(int time, ArrayList<RecipeIngredient> availableIngredients, CourseType courseType){
         ArrayList<Recipe> recommendations = new ArrayList<Recipe>();
-        for(Recipe r : allRecipes){
+        for(Recipe r : Recipe.allRecipes){
             boolean eligible = true;
             for(RecipeIngredient i : availableIngredients){
                 boolean found = false;
@@ -136,6 +138,7 @@ public class User {
         else{
             Collections.sort(recommendations, new Recipe.RecipeComparatorByTime(this));
         }
+        return recommendations;
     }
 
 
