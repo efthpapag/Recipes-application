@@ -108,9 +108,9 @@ public class UserTest {
         assertEquals("Pork chops with honey", r.get(0).getName());
         assertEquals(1, r.size());
         user2.rate(0, RatingLevel.Positive);
-        /*r = user2.search(10, ingredients, CourseType.Main);
+        r = user2.search(10, ingredients, CourseType.Main);
         assertEquals("Pork chops with honey and mustard", r.get(0).getName());
-        assertEquals("Pork chops with honey", r.get(1).getName());*/
+        assertEquals("Pork chops with honey", r.get(1).getName());
         user2.rate(0, RatingLevel.Neutral);
         HashMap<Integer, Date> h = new HashMap<Integer, Date>();
         h.put(0,new SimpleDateFormat("dd/MM/yyyy").parse("31/12/1998"));
@@ -123,7 +123,7 @@ public class UserTest {
 
     @Test
     public void accountCreation(){
-        assertEquals(true, User.accountCreation("Vefa", "abcd"));
+        User.accountCreation("Vefa", "abcd");
         assertEquals(true, User.accountCreation("Akis", "efgh"));
         assertEquals("Akis", User.allUsers.get(1).getUsername());
         assertEquals(false, User.accountCreation("Akis", "efgh"));
