@@ -123,8 +123,9 @@ public class UserTest {
 
     @Test
     public void accountCreation(){
-        User.accountCreation("Akis", "efgh");
-        assertEquals("Akis", User.allUsers.get(0).getUsername());
+        assertEquals(true, User.accountCreation("Vefa", "abcd"));
+        assertEquals(true, User.accountCreation("Akis", "efgh"));
+        assertEquals("Akis", User.allUsers.get(1).getUsername());
         assertEquals(false, User.accountCreation("Akis", "efgh"));
     }
 

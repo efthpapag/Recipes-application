@@ -159,11 +159,11 @@ public class Recipe{
 
     static public int ratingLevelsEncode(RatingLevel ratingLevel){
         if(ratingLevel.equals(RatingLevel.Positive)){
-            return 1;
+            return -1;
         }else if(ratingLevel.equals(RatingLevel.Neutral)){
             return 0;
         }else{
-            return -1;
+            return 1;
         }
     }
 
