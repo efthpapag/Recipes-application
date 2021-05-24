@@ -3,6 +3,7 @@ package gr.aueb.recipeapp;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -35,4 +36,5 @@ public class RecipeTest {
         this.r.calorieCalculation();
         assertEquals(6, r.getTotalCalories(), 0);
     }
+
 }
