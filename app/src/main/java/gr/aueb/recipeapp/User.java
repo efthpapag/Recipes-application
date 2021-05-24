@@ -8,17 +8,18 @@ import java.util.Iterator;
 
 public class User {
 
+    public static ArrayList<User> allUsers = new ArrayList<User>();
     private String username;
     private String password;
     private ArrayList<Recipe> recipesPublished;
-    private HashMap<Recipe, Date> recipesRead;
+    private HashMap<Integer, Date> recipesRead;
     private HashMap<Integer, Rating> ratings;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
         this.recipesPublished = new ArrayList<Recipe>();
-        this.recipesRead = new HashMap<Recipe, Date>();
+        this.recipesRead = new HashMap<Integer, Date>();
         this.ratings = new HashMap<Integer, Rating>();
     }
 
@@ -54,11 +55,11 @@ public class User {
         this.ratings = ratings;
     }
 
-    public HashMap<Recipe, Date> getRecipesRead() {
+    public HashMap<Integer, Date> getRecipesRead() {
         return recipesRead;
     }
 
-    public void setRecipesRead(HashMap<Recipe, Date> recipesRead) {
+    public void setRecipesRead(HashMap<Integer, Date> recipesRead) {
         this.recipesRead = recipesRead;
     }
 
@@ -104,10 +105,10 @@ public class User {
         ArrayList<Recipe> recommendations = new ArrayList<Recipe>();
         for(Recipe r : Recipe.allRecipes){
             boolean eligible = true;
-            for(RecipeIngredient i : availableIngredients){
+            for(RecipeIngredient i : r.getIngredients()){
                 boolean found = false;
-                for(RecipeIngredient j : r.getIngredients()){
-                    if((i.getIngredientType() == j.getIngredientType()) & (i.getQuantity() >= j.getQuantity())){
+                for(RecipeIngredient j : availableIngredients){
+                    if((i.getIngredientType().getName().equals(j.getIngredientType().getName())) & (i.getQuantity() <= j.getQuantity())){
                         found = true;
                         break;
                     }
@@ -141,6 +142,14 @@ public class User {
         return recommendations;
     }
 
-
+    static public Boolean accountCreation(String name, String password){
+        for (User u : allUsers){
+            if(u.getUsername().equals(name)){
+                return false;
+            }
+        }
+        allUsers.add(new User(name, password));
+        return true;
+    }
 
 }
