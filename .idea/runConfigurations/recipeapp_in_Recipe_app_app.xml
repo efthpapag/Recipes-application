@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="recipeapp in Recipe_app.app" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
+    <module name="Recipe_app.app" />
+    <useClassPathOnly />
+    <extension name="coverage" sample_coverage="false">
+      <pattern>
+        <option name="PATTERN" value="gr.aueb.recipeapp.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="directory" />
+    <option name="PARAMETERS" value="" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <dir value="$PROJECT_DIR$/app/src/test/java/gr/aueb/recipeapp" />
+    <method v="2">
+      <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
