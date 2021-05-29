@@ -1,6 +1,5 @@
-package gr.aueb.recipeapp;
+package gr.aueb.recipeapp.domain;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Ingredient {

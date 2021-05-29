@@ -1,6 +1,6 @@
-package gr.aueb.recipeapp;
+package gr.aueb.recipeapp.domain;
 
-public class Admin extends User{
+public class Admin extends User {
 
     public Admin(String username, String password) {
         super(username, password);

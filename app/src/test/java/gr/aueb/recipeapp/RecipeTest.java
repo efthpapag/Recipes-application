@@ -6,6 +6,12 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import gr.aueb.recipeapp.domain.CourseType;
+import gr.aueb.recipeapp.domain.Ingredient;
+import gr.aueb.recipeapp.domain.Recipe;
+import gr.aueb.recipeapp.domain.RecipeIngredient;
+import gr.aueb.recipeapp.domain.User;
+
 import static org.junit.Assert.*;
 
 public class RecipeTest {
@@ -33,7 +39,6 @@ public class RecipeTest {
 
     @Test
     public void calorieCalculation() {
-        this.r.calorieCalculation();
         assertEquals(6, r.getTotalCalories(), 0);
     }
 

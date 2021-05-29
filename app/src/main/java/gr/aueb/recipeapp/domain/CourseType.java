@@ -1,4 +1,4 @@
-package gr.aueb.recipeapp;
+package gr.aueb.recipeapp.domain;
 
 public enum CourseType {
     Appetizer,

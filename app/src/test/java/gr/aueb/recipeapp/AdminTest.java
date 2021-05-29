@@ -4,6 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import gr.aueb.recipeapp.domain.Admin;
+import gr.aueb.recipeapp.domain.Ingredient;
+
 import static org.junit.Assert.*;
 
 public class AdminTest {

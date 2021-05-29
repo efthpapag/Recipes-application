@@ -1,9 +1,11 @@
 package gr.aueb.recipeapp;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import gr.aueb.recipeapp.domain.Ingredient;
+import gr.aueb.recipeapp.domain.RecipeIngredient;
 
 import static org.junit.Assert.*;
 

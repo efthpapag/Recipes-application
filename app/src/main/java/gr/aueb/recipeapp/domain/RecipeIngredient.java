@@ -1,4 +1,6 @@
-package gr.aueb.recipeapp;
+package gr.aueb.recipeapp.domain;
+
+import gr.aueb.recipeapp.domain.Ingredient;
 
 public class RecipeIngredient {
 

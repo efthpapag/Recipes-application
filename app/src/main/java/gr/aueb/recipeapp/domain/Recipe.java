@@ -1,13 +1,10 @@
-package gr.aueb.recipeapp;
+package gr.aueb.recipeapp.domain;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import static gr.aueb.recipeapp.RatingLevel.Positive;
-
 public class Recipe{
 
-    public static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>();
     public static int idCounter = 0;
     private int id;
     private String name;
@@ -17,7 +14,7 @@ public class Recipe{
     private String steps;
     private ArrayList<RecipeIngredient> ingredients;
     private User user;
-    private float TotalCalories;
+    private float totalCalories;
 
     public Recipe(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user) {
         this.id = id;
@@ -28,7 +25,7 @@ public class Recipe{
         this.steps = steps;
         this.ingredients = ingredients;
         this.user = user;
-        this.TotalCalories = 0;
+        this.calorieCalculation();
     }
 
     public int getId() {
@@ -96,20 +93,20 @@ public class Recipe{
     }
 
     public float getTotalCalories() {
-        return TotalCalories;
+        return totalCalories;
     }
 
     public void calorieCalculation(){
         for (RecipeIngredient ing : this.ingredients){
-            this.TotalCalories += ing.calorieCalculation();
+            this.totalCalories += ing.calorieCalculation();
         }
     }
 
-    static class RecipeComparator implements Comparator<Recipe> {
+    public static class RecipeComparator implements Comparator<Recipe> {
 
         User u;
 
-        RecipeComparator(User u){
+        public RecipeComparator(User u){
             this.u = u;
         }
 
@@ -135,11 +132,11 @@ public class Recipe{
         }
     }
 
-    static class RecipeComparatorByTime implements Comparator<Recipe> {
+    public static class RecipeComparatorByTime implements Comparator<Recipe> {
 
         User u;
 
-        RecipeComparatorByTime(User u){
+        public RecipeComparatorByTime(User u){
             this.u = u;
         }
 
