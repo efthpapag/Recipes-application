@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Ingredient {
 
-    public static ArrayList<Ingredient> allIngredients = new ArrayList<Ingredient>();
     private String name;
     private int calories;
 

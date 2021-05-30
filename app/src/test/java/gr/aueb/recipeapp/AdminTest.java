@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class AdminTest {
 
-    private Admin a;
+    /*private Admin a;
 
     @Before
     public void setUp() throws Exception{
@@ -37,5 +37,5 @@ public class AdminTest {
         this.a.editIngredient("Steak", "Pork chop", 2);
         assertEquals("Pork chop", Ingredient.allIngredients.get(0).getName());
         assertEquals(2, Ingredient.allIngredients.get(0).getCalories());
-    }
+    }*/
 }
