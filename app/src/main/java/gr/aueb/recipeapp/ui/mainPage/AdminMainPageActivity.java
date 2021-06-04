@@ -17,11 +17,15 @@ public class AdminMainPageActivity extends AppCompatActivity {
     Button buttonSearch;
     Button buttonRecipes;
     Button buttonIngredients;
+    public static final String un = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main_page);
+
+        Intent intent = getIntent();
+        String us = intent.getStringExtra(UserMainPageActivity.un);
 
         buttonSearch = findViewById(R.id.searchRecipesButton);
         buttonRecipes = findViewById(R.id.recipesButton);
@@ -31,6 +35,7 @@ public class AdminMainPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminMainPageActivity.this, SearchActivity.class);
+                intent.putExtra(un, us);
                 startActivity(intent);
             }
         });

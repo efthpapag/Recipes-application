@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Iterator;
 
 import gr.aueb.recipeapp.domain.Admin;
+import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Rating;
 import gr.aueb.recipeapp.domain.RatingLevel;
 import gr.aueb.recipeapp.domain.Recipe;
@@ -57,6 +58,15 @@ public class UserDao {
     public static User login(String name, String password){
         for (User u : allUsers){
             if (u.getUsername().equals(name) & u.getPassword().equals(password)){
+                return u;
+            }
+        }
+        return null;
+    }
+
+    public static User findUser(String name){
+        for (User u : allUsers){
+            if (u.getUsername().equals(name)){
                 return u;
             }
         }

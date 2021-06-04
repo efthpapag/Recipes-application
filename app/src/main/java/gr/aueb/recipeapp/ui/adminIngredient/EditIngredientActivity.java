@@ -1,7 +1,6 @@
 package gr.aueb.recipeapp.ui.adminIngredient;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import gr.aueb.recipeapp.R;
 

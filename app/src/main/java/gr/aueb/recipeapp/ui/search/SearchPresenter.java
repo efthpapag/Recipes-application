@@ -16,8 +16,8 @@ public class SearchPresenter {
     public UserDao userDao;
     public User user;
 
-    SearchPresenter(/*SearchView searchView*/){
-
+    SearchPresenter(User user){
+        this.user = user;
     }
 
     public ArrayList<Recipe> search(int time, ArrayList<RecipeIngredient> availableIngredients, CourseType courseType){

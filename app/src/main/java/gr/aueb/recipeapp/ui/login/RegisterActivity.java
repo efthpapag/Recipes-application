@@ -18,6 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText editUsername;
     EditText editPassword;
     Button buttonRegister;
+    public static final String un = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else {
                     Intent intent = new Intent(getApplicationContext(), UserMainPageActivity.class);
+                    intent.putExtra(un, u.getUsername());
                     startActivity(intent);
                     getParent().finish();
                     finish();

@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText editPassword;
     Button buttonLogin;
     Button buttonRegister;
+    public static final String un = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                     else {
                         intent = new Intent(getApplicationContext(), UserMainPageActivity.class);
                     }
+                    intent.putExtra(un, u.getUsername());
                     startActivity(intent);
                     finish();
                 }

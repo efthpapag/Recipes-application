@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.CourseType;
+import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.ui.login.LoginActivity;
+import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
 
 public class SearchActivity extends AppCompatActivity {
 
+    public static final String un = "user";
     public static final String c = "course_type";
     public static final String t = "time";
     Button buttonAppetizer;
@@ -24,7 +27,7 @@ public class SearchActivity extends AppCompatActivity {
     Button buttonSelectIngredient;
     EditText editTime;
 
-    CourseType courseType = null;
+    String courseType = null;
     int time = -1;
 
     @Override
@@ -39,42 +42,47 @@ public class SearchActivity extends AppCompatActivity {
         buttonSelectIngredient = findViewById(R.id.selectIngredientsButton);
         editTime = findViewById(R.id.editTime);
 
+        Intent intent = getIntent();
+        String us = intent.getStringExtra(SearchActivity.un);
+
 
         buttonAppetizer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                courseType = CourseType.Appetizer;
+                courseType = "Appetizer";
             }
         });
 
         buttonMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                courseType = CourseType.Main;
+                courseType = "Main";
             }
         });
 
         buttonSalad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                courseType = CourseType.Salad;
+                courseType = "Salad";
             }
         });
 
         buttonDessert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                courseType = CourseType.Dessert;
+                courseType = "Dessert";
             }
         });
 
         buttonSelectIngredient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(courseType == null & time > 0)){
+                time = Integer.parseInt(editTime.getText().toString());
+                if (!(courseType == null) & (time > 0)){
                     Intent intent = new Intent(SearchActivity.this, IngredientSelectionActivity.class);
-                    //intent.putExtra(c, courseType);
-                    //intent.putExtra(t, time);
+                    intent.putExtra(c, courseType);
+                    intent.putExtra(t, time);
+                    intent.putExtra(un, us);
                     startActivity(intent);
                     finish();
                 }

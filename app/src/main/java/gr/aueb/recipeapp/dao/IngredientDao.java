@@ -24,4 +24,13 @@ public class IngredientDao {
         }
     }
 
+    public Ingredient findIngredient(String name){
+        for (Ingredient i : allIngredients){
+            if(i.getName().equals(name)){
+                return i;
+            }
+        }
+        return null;
+    }
+
 }

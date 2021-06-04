@@ -22,11 +22,15 @@ public class UserMainPageActivity extends AppCompatActivity {
 
     Button buttonSearch;
     Button buttonRecipes;
+    public static final String un = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_main_page);
+
+        Intent intent = getIntent();
+        String us = intent.getStringExtra(UserMainPageActivity.un);
 
         buttonSearch = findViewById(R.id.searchRecipesButton);
         buttonRecipes = findViewById(R.id.recipesButton);
@@ -35,6 +39,7 @@ public class UserMainPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserMainPageActivity.this, SearchActivity.class);
+                intent.putExtra(un, us);
                 startActivity(intent);
             }
         });
@@ -43,6 +48,7 @@ public class UserMainPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), UserRecipesActivity.class);
+                intent.putExtra(un, us);
                 startActivity(intent);
             }
         });

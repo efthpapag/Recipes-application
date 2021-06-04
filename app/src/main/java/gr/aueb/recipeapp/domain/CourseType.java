@@ -1,8 +1,10 @@
 package gr.aueb.recipeapp.domain;
 
+import java.io.Serializable;
+
 public enum CourseType {
     Appetizer,
-    Main,
     Salad,
+    Main,
     Dessert
 }

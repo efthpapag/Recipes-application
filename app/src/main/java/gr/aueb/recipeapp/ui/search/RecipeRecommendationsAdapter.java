@@ -1,4 +1,4 @@
-package gr.aueb.recipeapp.ui.adminIngredient;
+package gr.aueb.recipeapp.ui.search;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,17 +8,22 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-import gr.aueb.recipeapp.R;
-import gr.aueb.recipeapp.domain.Ingredient;
 
 import java.util.ArrayList;
 
-public class IngredientManagementAdapter extends BaseAdapter {
+import gr.aueb.recipeapp.R;
+import gr.aueb.recipeapp.domain.Ingredient;
+import gr.aueb.recipeapp.domain.Recipe;
+import gr.aueb.recipeapp.ui.adminIngredient.EditIngredientActivity;
+import gr.aueb.recipeapp.ui.recipePage.RecipePageActivity;
 
+public class RecipeRecommendationsAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<Ingredient> mArr;
+    private ArrayList<Recipe> mArr;
+    public static final String un = "user";
+    String us;
 
-    public IngredientManagementAdapter(Context context, ArrayList<Ingredient> Arr) {
+    public RecipeRecommendationsAdapter(Context context, ArrayList<Recipe> Arr, String us) {
         super();
         mContext = context;
         mArr = Arr;
@@ -36,11 +41,13 @@ public class IngredientManagementAdapter extends BaseAdapter {
         TextView tv = (TextView) view.findViewById(R.id.itemName);
         tv.setText(mArr.get(position).getName());
         Button btn1 = (Button) view.findViewById(R.id.editButton);
+        btn1.setText("select");
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( mContext, EditIngredientActivity.class);
+                Intent intent = new Intent( mContext, RecipePageActivity.class);
+                intent.putExtra(un, us);
                 mContext.startActivity(intent);
             }
         });
