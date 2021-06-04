@@ -1,9 +1,11 @@
 package gr.aueb.recipeapp.dao;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 
+import gr.aueb.recipeapp.domain.Admin;
 import gr.aueb.recipeapp.domain.Rating;
 import gr.aueb.recipeapp.domain.RatingLevel;
 import gr.aueb.recipeapp.domain.Recipe;
@@ -11,7 +13,7 @@ import gr.aueb.recipeapp.domain.User;
 
 public class UserDao {
 
-    public static ArrayList<User> allUsers = new ArrayList<User>();
+    public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password"), new User("Mamalakis", "1234")}));
 
     public void publish(User user, Recipe r){
         user.getRecipesPublished().add(r);
@@ -45,6 +47,7 @@ public class UserDao {
         }
     }
 
+
     public static User accountCreation(String name, String password){
         User user = new User(name, password);
         allUsers.add(user);
@@ -59,4 +62,5 @@ public class UserDao {
         }
         return null;
     }
+
 }

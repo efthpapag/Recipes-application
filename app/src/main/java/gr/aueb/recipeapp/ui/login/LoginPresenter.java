@@ -1,25 +1,22 @@
 package gr.aueb.recipeapp.ui.login;
 
+import gr.aueb.recipeapp.dao.AdminDao;
 import gr.aueb.recipeapp.dao.UserDao;
+import gr.aueb.recipeapp.domain.Admin;
 import gr.aueb.recipeapp.domain.User;
 
 public class LoginPresenter {
 
-    public User accountCreation(String name, String password){
-        for (User u : UserDao.allUsers){
-            if (u.getUsername().equals(name)){
-                return null;
-            }
-        }
-        return UserDao.accountCreation(name, password);
+    public User login(String name, String password){
+        return UserDao.login(name, password);
     }
 
-    public User login(String name, String password){
-        for (User u : UserDao.allUsers){
-            if (u.getUsername().equals(name)){
-                return UserDao.login(name, password);
+    public Boolean isAdmin(String name, String password){
+        for (Admin a : AdminDao.allAdmins){
+            if(a.getUsername().equals(name) & a.getPassword().equals(password)){
+                return true;
             }
         }
-        return null;
+        return false;
     }
 }
