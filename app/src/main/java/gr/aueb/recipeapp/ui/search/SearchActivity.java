@@ -8,12 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import gr.aueb.recipeapp.R;
-import gr.aueb.recipeapp.domain.CourseType;
-import gr.aueb.recipeapp.domain.Ingredient;
-import gr.aueb.recipeapp.ui.login.LoginActivity;
-import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -78,7 +73,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 time = Integer.parseInt(editTime.getText().toString());
-                if (!(courseType == null) & (time > 0)){
+                if (!(courseType == null) &(time > 0)){
                     Intent intent = new Intent(SearchActivity.this, IngredientSelectionActivity.class);
                     intent.putExtra(c, courseType);
                     intent.putExtra(t, time);

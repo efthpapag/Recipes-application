@@ -43,7 +43,6 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), UserMainPageActivity.class);
                     intent.putExtra(un, u.getUsername());
                     startActivity(intent);
-                    getParent().finish();
                     finish();
                 }
             }

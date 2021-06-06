@@ -1,4 +1,4 @@
-package gr.aueb.recipeapp.ui.search;
+package gr.aueb.recipeapp.ui.userRecipes;
 
 import android.content.Context;
 import android.text.Editable;
@@ -11,18 +11,14 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.ArrayList;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.Ingredient;
 
-import java.util.ArrayList;
-
-public class IngredientSelectionAdapter extends BaseAdapter {
-
-
-
+public class AddRecipeAdapter extends BaseAdapter {
     private Context context;
     public static ArrayList<Ingredient> IngredientArrayList;
-    public IngredientSelectionAdapter(Context context, ArrayList<Ingredient> IngredientArrayList) {
+    public AddRecipeAdapter(Context context, ArrayList<Ingredient> IngredientArrayList) {
         this.context = context;
         this.IngredientArrayList = IngredientArrayList;
     }
@@ -87,5 +83,4 @@ public class IngredientSelectionAdapter extends BaseAdapter {
         });
         return convertView;
     }
-
 }

@@ -1,7 +1,6 @@
 package gr.aueb.recipeapp.ui.userRecipes;
 
 import java.util.ArrayList;
-
 import gr.aueb.recipeapp.dao.RecipeDao;
 import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.CourseType;
@@ -21,16 +20,14 @@ public class RecipeManagementPresenter {
     }
 
     public void publish(String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients){
-        Recipe r = new Recipe(Recipe.idCounter, name, courseType, prepTime, portion, steps, ingredients, user);
-        userDao.publish(user, r);
-        recipeDao.add(r);
+        userDao.publish(Recipe.idCounter, name, courseType, prepTime, portion, steps, ingredients, user);
+        recipeDao.add(Recipe.idCounter, name, courseType, prepTime, portion, steps, ingredients, user);
         Recipe.idCounter++;
     }
 
     public void edit(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients){
         Recipe recipe = new Recipe(id, name, courseType, prepTime, portion, steps, ingredients, user);
-        userDao.edit(user, recipe);
-        recipeDao.update(recipe);
+        userDao.edit(id, name, courseType, prepTime, portion, steps, ingredients, user);
+        recipeDao.update(Recipe.idCounter, name, courseType, prepTime, portion, steps, ingredients, user);
     }
-
 }

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.ui.adminIngredient.IngredientManagementActivity;
-import gr.aueb.recipeapp.ui.recipePage.UserRecipesActivity;
+import gr.aueb.recipeapp.ui.userRecipes.UserRecipesActivity;
 import gr.aueb.recipeapp.ui.search.SearchActivity;
 
 public class AdminMainPageActivity extends AppCompatActivity {
@@ -43,7 +43,8 @@ public class AdminMainPageActivity extends AppCompatActivity {
         buttonRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), UserRecipesActivity.class);
+                Intent intent = new Intent(AdminMainPageActivity.this, UserRecipesActivity.class);
+                intent.putExtra(un, us);
                 startActivity(intent);
             }
         });
@@ -51,7 +52,7 @@ public class AdminMainPageActivity extends AppCompatActivity {
         buttonIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), IngredientManagementActivity.class);
+                Intent intent = new Intent(AdminMainPageActivity.this, IngredientManagementActivity.class);
                 startActivity(intent);
             }
         });

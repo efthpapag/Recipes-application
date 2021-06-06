@@ -2,7 +2,6 @@ package gr.aueb.recipeapp.ui.search;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
 import gr.aueb.recipeapp.dao.RecipeDao;
 import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.CourseType;
@@ -12,7 +11,6 @@ import gr.aueb.recipeapp.domain.User;
 
 public class SearchPresenter {
 
-    //public SearchView searchView;
     public UserDao userDao;
     public User user;
 

@@ -47,5 +47,4 @@ public class Ingredient {
         return this.getName();
     }
 
-
 }

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -14,13 +13,8 @@ import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.dao.IngredientDao;
 import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.CourseType;
-import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
-import gr.aueb.recipeapp.ui.adminIngredient.AddIngredientActivity;
-import gr.aueb.recipeapp.ui.adminIngredient.IngredientManagementActivity;
-import gr.aueb.recipeapp.ui.adminIngredient.IngredientManagementAdapter;
-import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
 
 public class RecipeRecommendationsActivity extends AppCompatActivity{
 
@@ -71,7 +65,7 @@ public class RecipeRecommendationsActivity extends AppCompatActivity{
 
         ArrayList<Recipe> recipes = new SearchPresenter(UserDao.findUser(us)).search(time, ingredientsChosen,courseType);
 
-        mListview = (ListView) findViewById(R.id.IngredientList);
+        mListview = (ListView) findViewById(R.id.list1);
         btnAction1 = (Button) findViewById(R.id.editButton);
         mAdapter = new RecipeRecommendationsAdapter(RecipeRecommendationsActivity.this, recipes, us);
         mListview.setAdapter(mAdapter);

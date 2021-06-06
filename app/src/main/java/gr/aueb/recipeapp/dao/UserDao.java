@@ -1,22 +1,32 @@
 package gr.aueb.recipeapp.dao;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 
 import gr.aueb.recipeapp.domain.Admin;
+import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Rating;
 import gr.aueb.recipeapp.domain.RatingLevel;
 import gr.aueb.recipeapp.domain.Recipe;
+import gr.aueb.recipeapp.domain.RecipeIngredient;
 import gr.aueb.recipeapp.domain.User;
 
 public class UserDao {
 
     public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password"), new User("Mamalakis", "1234")}));
 
-    public void publish(User user, Recipe r){
+    public void publish(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
+        Recipe r = new Recipe( id, name, courseType, prepTime, portion, steps, ingredients, user);
         user.getRecipesPublished().add(r);
     }
 
@@ -30,11 +40,11 @@ public class UserDao {
         }
     }
 
-    public void edit(User user, Recipe recipe){
+    public void edit(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
         for (Recipe r : user.getRecipesPublished()){
-            if (r.getId() == recipe.getId()){
+            if (r.getId() == id){
                 remove(user, r.getId());
-                user.getRecipesPublished().add(recipe);
+                user.getRecipesPublished().add(new Recipe(id, name, courseType, prepTime, portion, steps, ingredients, user));
             }
         }
     }
@@ -46,6 +56,12 @@ public class UserDao {
                 break;
             }
         }
+    }
+
+    public void addOnRead(Recipe r, User u){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+        Date date = new Date(System.currentTimeMillis());
+        u.getRecipesRead().put(r.getId(), date);
     }
 
 

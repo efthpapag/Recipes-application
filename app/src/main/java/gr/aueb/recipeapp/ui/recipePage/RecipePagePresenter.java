@@ -18,7 +18,12 @@ public class RecipePagePresenter {
         this.user = user;
     }
 
-    public void rate(User user, int id, RatingLevel level){
-        userDao.rate(user, id, level);
+    public void rate(int id, RatingLevel level){
+        userDao.rate(this.user, id, level);
     }
+
+    public void addOnRead(Recipe r){
+        new UserDao().addOnRead(r, user);
+    }
+
 }

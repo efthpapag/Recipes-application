@@ -21,12 +21,14 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<Recipe> mArr;
     public static final String un = "user";
+    public static final String r = "Recipe";
     String us;
 
     public RecipeRecommendationsAdapter(Context context, ArrayList<Recipe> Arr, String us) {
         super();
         mContext = context;
         mArr = Arr;
+        this.us = us;
     }
 
     public int getCount() {
@@ -48,6 +50,7 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent( mContext, RecipePageActivity.class);
                 intent.putExtra(un, us);
+                intent.putExtra(r, mArr.get(position).getId());
                 mContext.startActivity(intent);
             }
         });

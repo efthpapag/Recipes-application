@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp">
-        <activity android:name=".ui.recipePage.RecipePageActivity"></activity>
+        <activity android:name=".ui.userRecipes.EditRecipeActivity"></activity>
+        <activity android:name=".ui.userRecipes.AddRecipeActivity" />
+        <activity android:name=".ui.recipePage.RateActivity" />
+        <activity android:name=".ui.recipePage.RecipePageActivity" />
         <activity android:name=".ui.adminIngredient.AddIngredientActivity" />
         <activity android:name=".ui.adminIngredient.EditIngredientActivity" />
         <activity android:name=".ui.adminIngredient.IngredientManagementActivity" />
-        <activity android:name=".ui.recipePage.UserRecipesActivity" />
+        <activity android:name=".ui.userRecipes.UserRecipesActivity" />
         <activity android:name=".ui.search.RecipeRecommendationsActivity" />
         <activity android:name=".ui.search.IngredientSelectionActivity" />
         <activity android:name=".ui.search.SearchActivity" />

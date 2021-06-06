@@ -7,10 +7,11 @@ import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
+import gr.aueb.recipeapp.domain.User;
 
 public class RecipeDao {
-    public static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>(Arrays.asList(new Recipe[]{new Recipe(1,"mprizoles me meli", CourseType.Main, 5, 1, "text",
-            new ArrayList<RecipeIngredient>(Arrays.asList(new RecipeIngredient[]{new RecipeIngredient(7, IngredientDao.allIngredients.get(0))})), UserDao.allUsers.get(0))}));
+    public static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>();
+
 
     public Recipe find(int id){
         for (Recipe r : allRecipes){
@@ -21,7 +22,8 @@ public class RecipeDao {
         return null;
     }
 
-    public void add(Recipe r){
+    public void add(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
+        Recipe r = new Recipe( id, name, courseType, prepTime, portion, steps, ingredients, user);
         allRecipes.add(r);
     }
 
@@ -30,8 +32,8 @@ public class RecipeDao {
         allRecipes.remove(r);
     }
 
-    public void update(Recipe recipe){
-        remove(recipe.getId());
-        add(recipe);
+    public void update(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
+        remove(id);
+        add(id, name, courseType, prepTime, portion, steps, ingredients, user);
     }
 }

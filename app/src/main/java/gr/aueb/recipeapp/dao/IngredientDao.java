@@ -11,8 +11,10 @@ public class IngredientDao {
 
     public static ArrayList<Ingredient> allIngredients = new ArrayList<Ingredient>(Arrays.asList(new Ingredient[]{new Ingredient("meli", 1), new Ingredient("mprizola", 2)}));
 
-    public void registerIngredient(Ingredient i){
+    public Ingredient registerIngredient(String Name, int Calories){
+        Ingredient i = new Ingredient(Name, Calories);
         allIngredients.add(i);
+        return i;
     }
 
     public void editIngredient(String oldName, String newName, int newCalories){
