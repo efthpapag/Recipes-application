@@ -15,7 +15,7 @@ public class RecipeManagementPresenter {
     public User user;
     public RecipeDao recipeDao = new RecipeDao();
 
-    RecipeManagementPresenter(User user){
+    public RecipeManagementPresenter(User user){
         this.user = user;
     }
 

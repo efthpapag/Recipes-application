@@ -40,7 +40,7 @@ public class EditRecipeActivity extends AppCompatActivity {
         int id = intent.getIntExtra(UserRecipesAdapter.i, -1);
 
         name = findViewById(R.id.v1);
-        steps = findViewById(R.id.v4);
+        steps = findViewById(R.id.v5);
         courseType = findViewById(R.id.v2);
         portions = findViewById(R.id.v4);
         prepTime = findViewById(R.id.v3);
@@ -48,6 +48,7 @@ public class EditRecipeActivity extends AppCompatActivity {
 
         mListview = findViewById(R.id.list1);
         button = findViewById(R.id.button);
+        button.setText("edit");
         IngredientArrayList = populateList();
         mAdapter = new AddRecipeAdapter(EditRecipeActivity.this, IngredientDao.allIngredients);
         mListview.setAdapter(mAdapter);

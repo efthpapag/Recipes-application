@@ -43,7 +43,7 @@ public class AddRecipeActivity extends AppCompatActivity {
 
 
         name = findViewById(R.id.v1);
-        steps = findViewById(R.id.v4);
+        steps = findViewById(R.id.v5);
         courseType = findViewById(R.id.v2);
         portions = findViewById(R.id.v4);
         prepTime = findViewById(R.id.v3);

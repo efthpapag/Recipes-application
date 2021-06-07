@@ -77,7 +77,6 @@ public class IngredientSelectionAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Integer pos = (Integer)  checkBox.getTag();
-                Toast.makeText(context, "Checkbox "+pos+" clicked!", Toast.LENGTH_SHORT).show();
                 if(IngredientArrayList.get(pos).getSelected()){
                     IngredientArrayList.get(pos).setSelected(false);
                 }else {
