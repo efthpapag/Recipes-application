@@ -1,23 +1,75 @@
-# Μοντέλο πεδίου
+# Class diagram
 
-## Κλάσεις ανάλυσης
+![](uml/requirements/ClassDiagram.png)
 
-![Κλάσεις Ανάλυσης](uml/requirements/domain_model_diagram.png)
+# Sequence diagrams
 
-## Συμπεριφορές
+## Register
 
-#### Δημιουργία λογαριασμού
+![](uml/requirements/RegisterSequence.png)
 
-![](uml/requirements/account_creation_sequence_diagram.png)
+## Login
 
-#### Αναζήτηση και παρουσίαση συνταγών
+![](uml/requirements/LoginSequence.png)
 
-![](uml/requirements/search_sequence_diagram.png)
+## User main page
 
-#### Διαχείριση συνταγών
+![](uml/requirements/UserMainPageSequence.png)
 
-![](uml/requirements/recipe_management_sequence_diagram.png)
+## Admin main page
 
-# Coverage Report
+![](uml/requirements/AdminMainPageSequence.png)
+
+## Search
+
+![](uml/requirements/SearchSequence.png)
+
+## Ingredient selection
+
+![](uml/requirements/IngredientSelectionSequence.png)
+
+## Recipe recommendations
+
+![](uml/requirements/RecipeRecommendationsSequence.png)
+
+## Recipe page
+
+![](uml/requirements/RecipePageSequence.png)
+
+## Rate
+
+![](uml/requirements/RateSequence.png)
+
+## User recipes
+
+![](uml/requirements/UserRecipesSequence.png)
+
+## Add recipe
+
+![](uml/requirements/AddRecipeSequence.png)
+
+## Edit recipe
+
+![](uml/requirements/EditRecipeSequence.png)
+
+## Ingredient management
+
+![](uml/requirements/IngredientManagementSequence.png)
+
+## Add ingredient
+
+![](uml/requirements/AddIngredientSequence.png)
+
+## Edit ingredient
+
+![](uml/requirements/EditIngredientSequence.png)
+
+## Coverage Report R3
 
 ![](app/coverage_reports/coverage_report.png)
+
+## Coverage Report R4
+
+![](app/coverage_reports/coverage_report_R4.png)
+
+
