@@ -26,7 +26,7 @@ public class IngredientManagementAdapter extends BaseAdapter {
     private ArrayList<Ingredient> mArr;
 
     /**
-     *
+     * constructor of IngredientManagementAdapter class
      * @param context
      * @param Arr
      */
@@ -37,19 +37,19 @@ public class IngredientManagementAdapter extends BaseAdapter {
     }
 
     /**
-     *
-     * @return
+     * returns size of the list shown to the user of the app
+     * @return size of the list shown to the user of the app
      */
     public int getCount() {
         return mArr.size();
     }
 
     /**
-     *
+     * returns the layout of the list and starts the appropriate next activity based on the button clicked
      * @param position
      * @param view
      * @param parent
-     * @return
+     * @return layout
      */
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -74,7 +74,7 @@ public class IngredientManagementAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     * returns the item in position given in the list shown to the user
      * @param position
      * @return
      */

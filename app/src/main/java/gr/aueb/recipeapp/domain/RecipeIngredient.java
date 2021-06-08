@@ -20,15 +20,15 @@ public class RecipeIngredient {
     }
 
     /**
-     *
-     * @return
+     * returns the quantity of the ingredient
+     * @return quantity
      */
     public float getQuantity() {
         return quantity;
     }
 
     /**
-     *
+     * sets the quantity of the ingredient
      * @param quantity
      */
     public void setQuantity(float quantity) {
@@ -36,15 +36,15 @@ public class RecipeIngredient {
     }
 
     /**
-     *
-     * @return
+     * returns the ingredient type
+     * @return ingredient type
      */
     public Ingredient getIngredientType() {
         return ingredientType;
     }
 
     /**
-     *
+     * sets the ingredient type
      * @param ingredientType
      */
     public void setIngredientType(Ingredient ingredientType) {
@@ -52,8 +52,8 @@ public class RecipeIngredient {
     }
 
     /**
-     *
-     * @return
+     * calculates and returns the calories of the ingredient for its given quantity
+     * @return calories of the ingredient for its given quantity
      */
     public float calorieCalculation(){
         return quantity * ingredientType.getCalories();

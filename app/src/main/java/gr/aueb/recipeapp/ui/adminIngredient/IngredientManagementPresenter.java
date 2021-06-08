@@ -14,10 +14,10 @@ public class IngredientManagementPresenter {
     IngredientDao ingredientDao = new IngredientDao();
 
     /**
-     *
+     * creates a new ingredient and adds it on the list
      * @param name
      * @param calories
-     * @return
+     * @return the ingredient if it is created successfully
      */
     public Ingredient registerIngredient(String name, int calories){
         for (Ingredient i : IngredientDao.allIngredients){
@@ -28,6 +28,12 @@ public class IngredientManagementPresenter {
         return ingredientDao.registerIngredient(name, calories);
     }
 
+    /**
+     * edits the parameters of the ingredient
+     * @param oldName
+     * @param newName
+     * @param newCalories
+     */
     public void editIngredient(String oldName, String newName, int newCalories){
         ingredientDao.editIngredient(oldName, newName, newCalories);
     }

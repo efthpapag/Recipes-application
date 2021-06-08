@@ -22,15 +22,15 @@ public class Ingredient {
     }
 
     /**
-     *
-     * @return 
+     * returns the name of the ingredient
+     * @return name of ingredient
      */
     public String getName() {
         return name;
     }
 
     /**
-     *
+     * sets the name of the ingredient
      * @param name
      */
     public void setName(String name) {
@@ -38,15 +38,15 @@ public class Ingredient {
     }
 
     /**
-     *
-     * @return
+     * returns the calories of the ingredient
+     * @return calories if the ingredient
      */
     public int getCalories() {
         return this.calories;
     }
 
     /**
-     *
+     * sets the calories of the ingredient
      * @param calories
      */
     public void setCalories(int calories) {
@@ -54,15 +54,15 @@ public class Ingredient {
     }
 
     /**
-     *
-     * @return
+     * checks if the ingredient is selected
+     * @return the status of the ingredient
      */
     public boolean getSelected() {
         return isSelected;
     }
 
     /**
-     *
+     * sets the ingredient status as selected
      * @param selected
      */
     public void setSelected(boolean selected) {
@@ -70,15 +70,15 @@ public class Ingredient {
     }
 
     /**
-     *
-     * @return
+     * returns the quantity of the ingredient from the edit text
+     * @return the quantity of the edit text
      */
     public String getEditTextValue() {
         return editTextValue;
     }
 
     /**
-     *
+     * sets quantity of the ingredient from the edit text
      * @param editTextValue
      */
     public void setEditTextValue(String editTextValue) {
@@ -86,8 +86,8 @@ public class Ingredient {
     }
 
     /**
-     *
-     * @return
+     * converts ingredient to string
+     * @return the name of the ingredient
      */
     @Override
     public String toString() {

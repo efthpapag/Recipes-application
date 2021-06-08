@@ -28,7 +28,7 @@ public class AddIngredientActivity extends AppCompatActivity {
     EditText caloriesText;
 
     /**
-     *
+     * creates the layout and starts the appropriate next activity based on the button clicked and receives user input
      * @param savedInstanceState
      */
     @Override

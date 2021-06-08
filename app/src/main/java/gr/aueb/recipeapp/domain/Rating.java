@@ -28,15 +28,15 @@ public class Rating {
     }
 
     /**
-     *
-     * @return
+     * returns the rating level of the rating
+     * @return rating level
      */
     public RatingLevel getRating() {
         return rating;
     }
 
     /**
-     *
+     * sets the rating level of the rating
      * @param rating
      */
     public void setRating(RatingLevel rating) {
@@ -44,15 +44,15 @@ public class Rating {
     }
 
     /**
-     *
-     * @return
+     * returns the date that the rating was submitted
+     * @return the date that the rating was submitted
      */
     public Date getDate() {
         return date;
     }
 
     /**
-     *
+     * sets the date that the rating was submitted
      * @param date
      */
     public void setDate(Date date) {
@@ -60,15 +60,15 @@ public class Rating {
     }
 
     /**
-     *
-     * @return
+     * returns the user that submitted the rating
+     * @return user that submitted the rating
      */
     public User getUser() {
         return user;
     }
 
     /**
-     *
+     * sets the user that submitted the rating
      * @param user
      */
     public void setUser(User user) {
@@ -76,15 +76,15 @@ public class Rating {
     }
 
     /**
-     *
-     * @return
+     * returns the recipe for which the rating is submitted
+     * @return recipe for which the rating is submitted
      */
     public Recipe getRecipe() {
         return recipe;
     }
 
     /**
-     *
+     * sets the recipe for which the rating is submitted
      * @param recipe
      */
     public void setRecipe(Recipe recipe) {

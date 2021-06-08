@@ -45,15 +45,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the id of the recipe
+     * @return id of the recipe
      */
     public int getId() {
         return id;
     }
 
     /**
-     *
+     * sets the id of the recipe
      * @param id
      */
     public void setId(int id) {
@@ -61,15 +61,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the name of the recipe
+     * @return name of recipe
      */
     public String getName() {
         return name;
     }
 
     /**
-     *
+     * sets the name of the recipe
      * @param name
      */
     public void setName(String name) {
@@ -77,15 +77,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the type of the course of the recipe
+     * @return course type
      */
     public CourseType getCourseType() {
         return courseType;
     }
 
     /**
-     *
+     * sets the type of the course of the recipe
      * @param courseType
      */
     public void setCourseType(CourseType courseType) {
@@ -93,15 +93,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the preparation time of the recipe
+     * @return preparation time
      */
     public int getPrepTime() {
         return prepTime;
     }
 
     /**
-     *
+     * sets the preparation time of the recipe
      * @param prepTime
      */
     public void setPrepTime(int prepTime) {
@@ -109,15 +109,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the portions of the recipe
+     * @return portions of the recipe
      */
     public int getPortion() {
         return portion;
     }
 
     /**
-     *
+     * sets the portions of the recipe
      * @param portion
      */
     public void setPortion(int portion) {
@@ -125,15 +125,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the steps of the recipe
+     * @return steps of the recipe
      */
     public String getSteps() {
         return steps;
     }
 
     /**
-     *
+     * sets the steps of the recipe
      * @param steps
      */
     public void setSteps(String steps) {
@@ -141,15 +141,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the ingredients of the recipe
+     * @return ingredients of the recipe
      */
     public ArrayList<RecipeIngredient> getIngredients() {
         return ingredients;
     }
 
     /**
-     *
+     * sets the ingredients of the recipe
      * @param ingredients
      */
     public void setIngredients(ArrayList<RecipeIngredient> ingredients) {
@@ -157,15 +157,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the user that published the recipe
+     * @return user that published the recipe
      */
     public User getUser() {
         return user;
     }
 
     /**
-     *
+     * sets the user that published the recipe
      * @param user
      */
     public void setUser(User user) {
@@ -173,15 +173,15 @@ public class Recipe{
     }
 
     /**
-     *
-     * @return
+     * returns the calories of the recipe
+     * @return calories of the recipe
      */
     public float getTotalCalories() {
         return totalCalories;
     }
 
     /**
-     *
+     * calculates the total calories of the recipe
      */
     public void calorieCalculation(){
         for (RecipeIngredient ing : this.ingredients){
@@ -194,7 +194,7 @@ public class Recipe{
         User u;
 
         /**
-         *
+         * constructor of RecipeComparator class
          * @param u
          */
         public RecipeComparator(User u){
@@ -202,7 +202,7 @@ public class Recipe{
         }
 
         /**
-         *
+         * compares two recioes
          * @param r1
          * @param r2
          * @return
@@ -252,9 +252,9 @@ public class Recipe{
     }
 
     /**
-     *
+     * encodes rating levels
      * @param ratingLevel
-     * @return
+     * @return the encoded rating level
      */
     static public int ratingLevelsEncode(RatingLevel ratingLevel){
         if(ratingLevel.equals(RatingLevel.Positive)){
