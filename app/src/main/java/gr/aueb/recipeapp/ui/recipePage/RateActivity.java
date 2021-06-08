@@ -30,7 +30,7 @@ public class RateActivity extends AppCompatActivity {
     RatingLevel rate;
 
     /**
-     *
+     *creates the layout, receives the user input and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

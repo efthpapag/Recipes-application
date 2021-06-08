@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     public static final String un = "user";
 
     /**
-     *
+     *creates the layout, receives the user input and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

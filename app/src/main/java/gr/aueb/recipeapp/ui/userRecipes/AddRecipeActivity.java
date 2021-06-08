@@ -36,7 +36,7 @@ public class AddRecipeActivity extends AppCompatActivity {
     public ArrayList<Ingredient> IngredientArrayList;
 
     /**
-     *
+     *creates the layout, receives the user input and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

@@ -34,7 +34,7 @@ public class RecipeRecommendationsActivity extends AppCompatActivity{
     Button btnAction1;
 
     /**
-     *
+     *creates the layout
      * @param savedInstanceState
      */
     @Override

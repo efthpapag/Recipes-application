@@ -29,7 +29,7 @@ public class SearchActivity extends AppCompatActivity {
     String courseType = null;
     int time = -1;
 
-    /**
+    /**creates the layout, receives the user input and starts the appropriate next activity based on the button clicked
      *
      * @param savedInstanceState
      */

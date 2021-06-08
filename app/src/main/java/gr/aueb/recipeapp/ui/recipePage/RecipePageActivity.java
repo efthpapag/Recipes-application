@@ -34,7 +34,7 @@ public class RecipePageActivity extends AppCompatActivity {
     TextView prepTime;
 
     /**
-     *
+     *creates the layout and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

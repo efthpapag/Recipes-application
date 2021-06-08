@@ -11,20 +11,20 @@ import gr.aueb.recipeapp.domain.User;
  */
 public class LoginPresenter {
     /**
-     *
+     *checks if the credentials belong to a user
      * @param name
      * @param password
-     * @return
+     * @return the user with this credentials or null if the user does not exists
      */
     public User login(String name, String password){
         return UserDao.login(name, password);
     }
 
     /**
-     *
+     *checks if the user is an admin
      * @param name
      * @param password
-     * @return
+     * @return true if the user is an admin or false if the user is an admin
      */
     public Boolean isAdmin(String name, String password){
         for (Admin a : AdminDao.allAdmins){

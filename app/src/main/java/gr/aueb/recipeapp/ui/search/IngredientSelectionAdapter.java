@@ -28,7 +28,7 @@ public class IngredientSelectionAdapter extends BaseAdapter {
     public static ArrayList<Ingredient> IngredientArrayList;
 
     /**
-     *
+     *constructor of IngredientSelectionAdapter class
      * @param context
      * @param IngredientArrayList
      */
@@ -57,8 +57,8 @@ public class IngredientSelectionAdapter extends BaseAdapter {
     }
 
     /**
-     *
-     * @return
+     *returns size of the list shown to the user of the app
+     * @return size of the list shown to the user of the app
      */
     @Override
     public int getCount() {
@@ -66,9 +66,9 @@ public class IngredientSelectionAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the item in possition given in the list shown to the user
      * @param position
-     * @return
+     * @return the item in possition given in the list shown to the user
      */
     @Override
     public Object getItem(int position) {
@@ -86,11 +86,11 @@ public class IngredientSelectionAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the layout of the list,which checkboxes are clicked, user in put for each list item and starts the appropriate next activity based on the button clicked
      * @param position
      * @param convertView
      * @param parent
-     * @return
+     * @return layout
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

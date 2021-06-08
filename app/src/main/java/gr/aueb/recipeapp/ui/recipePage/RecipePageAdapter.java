@@ -30,19 +30,19 @@ public class RecipePageAdapter extends BaseAdapter {
     }
 
     /**
-     *
-     * @return
+     *returns the layout of the list
+     * @return layout
      */
     public int getCount() {
         return mArr.size();
     }
 
     /**
-     *
+     *returns the layout of the list and which checkboxes are clicked
      * @param position
      * @param view
      * @param parent
-     * @return
+     * @return layout
      */
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -55,9 +55,9 @@ public class RecipePageAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the item in possition given in the list shown to the user
      * @param position
-     * @return
+     * @return the item in possition given in the list shown to the user
      */
     public Object getItem(int position) {
         return position;

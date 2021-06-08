@@ -22,7 +22,7 @@ public class UserRecipesActivity extends AppCompatActivity {
     Button button;
 
     /**
-     *
+     *creates the layout and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

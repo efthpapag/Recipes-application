@@ -11,7 +11,7 @@ import gr.aueb.recipeapp.ui.login.LoginActivity;
  */
 public class MainActivity extends AppCompatActivity {
     /**
-     *
+     * creates the layout of MainActivity and calls the LoginActivity
      * @param savedInstanceState
      */
     @Override

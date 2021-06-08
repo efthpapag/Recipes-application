@@ -15,7 +15,7 @@ public class UserRecipesPresenter {
     public RecipeDao recipeDao = new RecipeDao();
 
     /**
-     *
+     *constructor of UserRecipesPresenter class
      * @param user
      */
     UserRecipesPresenter(User user){
@@ -23,7 +23,7 @@ public class UserRecipesPresenter {
     }
 
     /**
-     *
+     *removes a recipe from the list of all recipes and the list of recipes published by the user that originally published it
      * @param id
      */
     public void remove(int id){

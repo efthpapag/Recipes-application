@@ -19,7 +19,7 @@ public class SearchPresenter {
     public User user;
 
     /**
-     *
+     *constructor of SearchPresenter class
      * @param user
      */
     SearchPresenter(User user){
@@ -27,11 +27,11 @@ public class SearchPresenter {
     }
 
     /**
-     *
+     *returns the recipes that correspond to the users demands in the appropriate order
      * @param time
      * @param availableIngredients
      * @param courseType
-     * @return
+     * @return the recipes that correspond to the users demands in the appropriate order
      */
     public ArrayList<Recipe> search(int time, ArrayList<RecipeIngredient> availableIngredients, CourseType courseType){
         ArrayList<Recipe> recommendations = new ArrayList<Recipe>();

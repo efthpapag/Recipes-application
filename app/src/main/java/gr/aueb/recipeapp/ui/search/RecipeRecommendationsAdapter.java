@@ -29,7 +29,7 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
     String us;
 
     /**
-     *
+     *constructor of RecipeRecommendationsAdapter class
      * @param context
      * @param Arr
      * @param us
@@ -42,19 +42,19 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
     }
 
     /**
-     *
-     * @return
+     * returns size of the list shown to the user of the app
+     * @return size of the list shown to the user of the app
      */
     public int getCount() {
         return mArr.size();
     }
 
     /**
-     *
+     *returns the layout of the list and starts the appropriate next activity based on the button clicked
      * @param position
      * @param view
      * @param parent
-     * @return
+     * @return layout
      */
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -80,9 +80,9 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the item in possition given in the list shown to the user
      * @param position
-     * @return
+     * @return the position of an item in the list shown to the user
      */
     public Object getItem(int position) {
         return position;

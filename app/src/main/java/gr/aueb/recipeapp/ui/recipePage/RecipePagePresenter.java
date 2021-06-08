@@ -18,7 +18,7 @@ public class RecipePagePresenter {
     public User user;
 
     /**
-     *
+     * constructor of RecipeRecommendationsAdapter class
      * @param user
      */
     public RecipePagePresenter(User user){
@@ -26,7 +26,7 @@ public class RecipePagePresenter {
     }
 
     /**
-     *
+     *rates recipe by id
      * @param id
      * @param level
      */

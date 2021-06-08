@@ -37,7 +37,7 @@ public class IngredientSelectionActivity extends AppCompatActivity {
     ArrayList<String> ingredientsChosenQuantity = new ArrayList<String>();
 
     /**
-     *
+     *creates the layout and starts the appropriate next activity based on the button clicked
      * @param savedInstanceState
      */
     @Override

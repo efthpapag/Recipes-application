@@ -20,7 +20,7 @@ public class RecipeManagementPresenter {
     public RecipeDao recipeDao = new RecipeDao();
 
     /**
-     *
+     *constructor of RecipeManagementPresenter class
      * @param user
      */
     public RecipeManagementPresenter(User user){
@@ -28,7 +28,7 @@ public class RecipeManagementPresenter {
     }
 
     /**
-     *
+     *adds the new recipe to the list of all recipes and the list of recipes published by this user
      * @param name
      * @param courseType
      * @param prepTime
@@ -43,7 +43,7 @@ public class RecipeManagementPresenter {
     }
 
     /**
-     *
+     *makes the changes to the recipe on the list of all recipes and the list of recipes published by this user
      * @param id
      * @param name
      * @param courseType

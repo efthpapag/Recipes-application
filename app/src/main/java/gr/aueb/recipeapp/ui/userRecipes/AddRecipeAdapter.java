@@ -22,6 +22,12 @@ import gr.aueb.recipeapp.domain.Ingredient;
 public class AddRecipeAdapter extends BaseAdapter {
     private Context context;
     public static ArrayList<Ingredient> IngredientArrayList;
+
+    /**
+     * constructor of AddRecipeAdapter class
+     * @param context
+     * @param IngredientArrayList
+     */
     public AddRecipeAdapter(Context context, ArrayList<Ingredient> IngredientArrayList) {
         this.context = context;
         this.IngredientArrayList = IngredientArrayList;
@@ -37,9 +43,9 @@ public class AddRecipeAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the position of an item in the list shown to the user
      * @param position
-     * @return
+     * @return the position of an item in the list shown to the user
      */
     @Override
     public int getItemViewType(int position) {
@@ -56,9 +62,9 @@ public class AddRecipeAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the position of an item in the list shown to the user
      * @param position
-     * @return
+     * @return the position of an item in the list shown to the user
      */
     @Override
     public Object getItem(int position) {
@@ -66,9 +72,9 @@ public class AddRecipeAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the position of an item in the list shown to the user
      * @param position
-     * @return
+     * @return the position of an item in the list shown to the user
      */
     @Override
     public long getItemId(int position) {
@@ -76,11 +82,11 @@ public class AddRecipeAdapter extends BaseAdapter {
     }
 
     /**
-     *
+     *returns the layout of the list and which checkboxes are clicked
      * @param position
      * @param convertView
      * @param parent
-     * @return
+     * @return layout
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

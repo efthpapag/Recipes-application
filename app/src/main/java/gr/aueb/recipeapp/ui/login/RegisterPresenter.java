@@ -9,10 +9,10 @@ import gr.aueb.recipeapp.domain.User;
  */
 public class RegisterPresenter {
     /**
-     *
+     *creates new account for a new user
      * @param name
      * @param password
-     * @return
+     * @return the new user
      */
     public User accountCreation(String name, String password){
         for (User u : UserDao.allUsers){
