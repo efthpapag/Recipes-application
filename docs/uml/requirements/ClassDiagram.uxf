@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>685</x>
+      <y>840</y>
+      <w>190</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>UserDao
+--
+-allUser: ArrayList&lt;User&gt;
+--
++void publish(int id, String name, CourseType courseType, 
+ int prepTime, int portion, String steps, 
+ ArrayList&lt;RecipeIngredient&gt; ingredients, User user)
++void remove(User user, int id)
++edit edit(int id, String name, CourseType courseType, 
+ int prepTime, int portion, String steps, 
+ ArrayList&lt;RecipeIngredient&gt; ingredients, User user)
++void rate(User user, int id, RatingLevel level)
++void addOnRead(Recipe r, User u)
++void accountCreation(String name, String password)
++void login(String name, String password)
++void findUser(String name)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>80</y>
+      <w>175</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>RecipeDao
+--
+-allRecipes: ArrayList&lt;Recipe&gt;
+--
++Recipe find(int id)
++void add(int id, String name, CourseType courseType, 
+ int prepTIme, int portions, String steps,
+ ArrayList&lt;RecipeIngredient&gt; ingredients)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1295</x>
+      <y>580</y>
+      <w>215</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>IngredientDao
+--
+-allIngredients: ArrayList&lt;Ingredient&gt;
+--
++registerIngredient(String name, int calories)
++editIngredient(String oldName, String newName, int newCalories)
++findIngredient(String name)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>870</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>AdminDao
+--
+-allAdmins: ArrayList&lt;Admin&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>790</y>
+      <w>105</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>Admin
+--
+--
++Admin(username, password)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>110</y>
+      <w>55</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+CourseType
+--
+Appetizer
+Salad
+Main
+Dessert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>130</y>
+      <w>45</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+RatingLevel
+--
+Positive
+Neutral
+Negative</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1025</x>
+      <y>280</y>
+      <w>175</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>RecipeIngredient
+--
+-quantity: float
+-ingredientType: Ingredient
+--
++RecipeIngredient(float quantity, Ingredient ingredient)
++float getQuantity()
++void setQuantity(float quantity)
++Ingredient getIngredientType()
++void setIngredientType(Ingredient ingredientType)
++float calorieCalculation()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>640</y>
+      <w>135</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-username: String
+- password: String
+-recipesPublished: ArrayList&lt;Recipe&gt;
+-recipesRead: HashMap&lt;Integer, Date&gt;
+-ratings: HashMap&lt;Integer, Rating&gt;
+--
++User(String username, String password)
++String getUsername()
++String setUsername(String username)
++String getPassword()
++void setPassword(String password)
++ArrayList&lt;Recipe&gt; getRecipesPublished()
++void setRecipesPublished(ArrayList&lt;Recipe&gt; recipesPublished)
++HashMap&lt;Integer, Rating&gt; getRatings()
++void setRating(HashMap&lt;Integer, Rating&gt; ratings)
++HashMap&lt;Integer, Date&gt; getRecipesRead()
++void setRecipesRead()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>230</y>
+      <w>195</w>
+      <h>265</h>
+    </coordinates>
+    <panel_attributes>Recipe
+--
+-static int idCounter
+-int id
+-String name
+-CourseType courseType
+-int prepTIme
+-int portion
+-String steps
+-ArrayList&lt;RecipeIngredient&gt; ingredients
+-User user
+-float totalCalories
+--
++Recipe(int id, String name, CourseType courseType,
+ int prepTime, int portion, String steps, 
+ ArrayList&lt;RecipeIngredient&gt; ingredients, User user)
++int getId()
++void setId(int id)
++String getName()
++void setName(String name)
++CourseType getCourseType()
++void setCourseType(CourseType courseType)
++int getPrepTime()
++void setPrepTime(int prepTime)
++int getPortion()
++void setPortion(int portion) 
++String getSteps()
++void setSteps(String steps)
++ArrayList&lt;RecipeIngredient&gt; getIngredients()
++void setIngredients(ArrayList&lt;RecipeIngredient&gt; ingredients)
++User getUser()
++void setUser(User user)
++float getTotalCalories()
++void calorieCalculation()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>365</x>
+      <y>265</y>
+      <w>105</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Rating
+--
+-RatingLevel rating
+-Date date
+-User user
+-Recipe recipe
+--
++Rating(RatingLevel rating, Date date, User user, Recipe recipe)
++RatingLevel getRating()
++void setRating(RatingLevel rating)
++Date getDate()
++void setDate(Date date)
++User getUser()
++void setUser(User user)
++Recipe getRecipe()
++void setRecipe(Recipe recipe)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1065</x>
+      <y>545</y>
+      <w>120</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Ingredient
+--
+-String name
+-int calories
+-boolean isSelected
+-String editTextValue
+--
++Ingredient(String name, int calories)
++String getName()
++void setName(String name)
++void getCalories()
++void setCalories()
++boolean getSelected()
++void setSelected(boolean selected)
++String getEditTextValue()
++void setEditTextValue(String editTextValue)
++String toString()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1235</x>
+      <y>810</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+contains ^</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>780</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+contains ^</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1180</x>
+      <y>590</y>
+      <w>125</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+&lt; contains</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>360</y>
+      <w>50</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+is of type v</panel_attributes>
+    <additional_attributes>10.0;370.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>795</x>
+      <y>150</y>
+      <w>60</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+contains v</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>465</x>
+      <y>280</y>
+      <w>210</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+concerns &gt;</panel_attributes>
+    <additional_attributes>400.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>175</y>
+      <w>15</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>160</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>855</x>
+      <y>290</y>
+      <w>180</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>725</y>
+      <w>420</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;820.0;10.0;820.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>490</y>
+      <w>55</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+teaches to ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>380</y>
+      <w>280</w>
+      <h>305</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+submits ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0;540.0;580.0</additional_attributes>
+  </element>
+</diagram>
