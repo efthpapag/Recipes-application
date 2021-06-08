@@ -1,0 +1,9 @@
+gr.aueb.recipeapp
+gr.aueb.recipeapp.dao
+gr.aueb.recipeapp.domain
+gr.aueb.recipeapp.ui.adminIngredient
+gr.aueb.recipeapp.ui.login
+gr.aueb.recipeapp.ui.mainPage
+gr.aueb.recipeapp.ui.recipePage
+gr.aueb.recipeapp.ui.search
+gr.aueb.recipeapp.ui.userRecipes
