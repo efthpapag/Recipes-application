@@ -14,7 +14,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.Ingredient;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class AddRecipeAdapter extends BaseAdapter {
     private Context context;
     public static ArrayList<Ingredient> IngredientArrayList;
@@ -22,26 +26,62 @@ public class AddRecipeAdapter extends BaseAdapter {
         this.context = context;
         this.IngredientArrayList = IngredientArrayList;
     }
+
+    /**
+     *
+     * @return
+     */
     @Override
     public int getViewTypeCount() {
         return getCount();
     }
+
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
         return position;
     }
+
+    /**
+     *
+     * @return
+     */
     @Override
     public int getCount() {
         return IngredientArrayList.size();
     }
+
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public Object getItem(int position) {
         return IngredientArrayList.get(position);
     }
+
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public long getItemId(int position) {
         return 0;
     }
+
+    /**
+     *
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

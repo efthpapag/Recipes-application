@@ -4,9 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import gr.aueb.recipeapp.ui.login.LoginActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class MainActivity extends AppCompatActivity {
-
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

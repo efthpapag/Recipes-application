@@ -14,7 +14,11 @@ import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class EditRecipeActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -29,6 +33,10 @@ public class EditRecipeActivity extends AppCompatActivity {
     EditText prepTime;
     public ArrayList<Ingredient> IngredientArrayList;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

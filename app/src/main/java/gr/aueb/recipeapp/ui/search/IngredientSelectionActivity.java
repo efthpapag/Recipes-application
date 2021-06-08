@@ -16,7 +16,11 @@ import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
 import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class IngredientSelectionActivity extends AppCompatActivity {
 
     public static final String c = "course_type";
@@ -32,6 +36,10 @@ public class IngredientSelectionActivity extends AppCompatActivity {
     ArrayList<String> ingredientsChosenName = new ArrayList<String>();
     ArrayList<String> ingredientsChosenQuantity = new ArrayList<String>();
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

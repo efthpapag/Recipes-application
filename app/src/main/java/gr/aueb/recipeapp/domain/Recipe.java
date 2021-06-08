@@ -2,7 +2,11 @@ package gr.aueb.recipeapp.domain;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class Recipe{
 
 
@@ -17,6 +21,17 @@ public class Recipe{
     private User user;
     private float totalCalories;
 
+    /**
+     *
+     * @param id
+     * @param name
+     * @param courseType
+     * @param prepTime
+     * @param portion
+     * @param steps
+     * @param ingredients
+     * @param user
+     */
     public Recipe(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user) {
         this.id = id;
         this.name = name;
@@ -29,74 +44,145 @@ public class Recipe{
         this.calorieCalculation();
     }
 
+    /**
+     *
+     * @return
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public CourseType getCourseType() {
         return courseType;
     }
 
+    /**
+     *
+     * @param courseType
+     */
     public void setCourseType(CourseType courseType) {
         this.courseType = courseType;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPrepTime() {
         return prepTime;
     }
 
+    /**
+     *
+     * @param prepTime
+     */
     public void setPrepTime(int prepTime) {
         this.prepTime = prepTime;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPortion() {
         return portion;
     }
 
+    /**
+     *
+     * @param portion
+     */
     public void setPortion(int portion) {
         this.portion = portion;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSteps() {
         return steps;
     }
 
+    /**
+     *
+     * @param steps
+     */
     public void setSteps(String steps) {
         this.steps = steps;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<RecipeIngredient> getIngredients() {
         return ingredients;
     }
 
+    /**
+     *
+     * @param ingredients
+     */
     public void setIngredients(ArrayList<RecipeIngredient> ingredients) {
         this.ingredients = ingredients;
     }
 
+    /**
+     *
+     * @return
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     *
+     * @param user
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public float getTotalCalories() {
         return totalCalories;
     }
 
+    /**
+     *
+     */
     public void calorieCalculation(){
         for (RecipeIngredient ing : this.ingredients){
             this.totalCalories += ing.calorieCalculation();
@@ -107,10 +193,20 @@ public class Recipe{
 
         User u;
 
+        /**
+         *
+         * @param u
+         */
         public RecipeComparator(User u){
             this.u = u;
         }
 
+        /**
+         *
+         * @param r1
+         * @param r2
+         * @return
+         */
         public int compare(Recipe r1, Recipe r2) {
             int r1Encoding;
             int r2Encoding;
@@ -155,6 +251,11 @@ public class Recipe{
         }
     }
 
+    /**
+     *
+     * @param ratingLevel
+     * @return
+     */
     static public int ratingLevelsEncode(RatingLevel ratingLevel){
         if(ratingLevel.equals(RatingLevel.Positive)){
             return -1;

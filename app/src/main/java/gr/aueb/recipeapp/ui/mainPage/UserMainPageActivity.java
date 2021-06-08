@@ -10,13 +10,21 @@ import android.widget.Button;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.ui.userRecipes.UserRecipesActivity;
 import gr.aueb.recipeapp.ui.search.SearchActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class UserMainPageActivity extends AppCompatActivity {
 
     Button buttonSearch;
     Button buttonRecipes;
     public static final String un = "user";
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

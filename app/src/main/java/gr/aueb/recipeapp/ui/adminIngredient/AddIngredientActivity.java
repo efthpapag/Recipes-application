@@ -16,13 +16,21 @@ import gr.aueb.recipeapp.ui.login.LoginActivity;
 import gr.aueb.recipeapp.ui.login.LoginPresenter;
 import gr.aueb.recipeapp.ui.mainPage.AdminMainPageActivity;
 import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class AddIngredientActivity extends AppCompatActivity {
 
     Button btn;
     EditText nameText;
     EditText caloriesText;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

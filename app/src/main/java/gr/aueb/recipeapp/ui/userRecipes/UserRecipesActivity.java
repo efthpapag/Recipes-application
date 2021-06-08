@@ -9,7 +9,11 @@ import android.widget.ListView;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.ui.mainPage.AdminMainPageActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class UserRecipesActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -17,6 +21,10 @@ public class UserRecipesActivity extends AppCompatActivity {
     private UserRecipesAdapter mAdapter;
     Button button;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

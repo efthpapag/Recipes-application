@@ -13,7 +13,11 @@ import android.widget.Toast;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.ui.search.RecipeRecommendationsAdapter;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class EditIngredientActivity extends AppCompatActivity {
 
     public static final String ingn = "ingredient_name";
@@ -22,6 +26,10 @@ public class EditIngredientActivity extends AppCompatActivity {
     EditText nameText;
     EditText caloriesText;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

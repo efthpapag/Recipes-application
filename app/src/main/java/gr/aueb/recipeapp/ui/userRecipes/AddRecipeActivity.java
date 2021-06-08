@@ -17,7 +17,11 @@ import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
 import gr.aueb.recipeapp.ui.search.RecipeRecommendationsAdapter;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class AddRecipeActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -31,6 +35,10 @@ public class AddRecipeActivity extends AppCompatActivity {
     EditText prepTime;
     public ArrayList<Ingredient> IngredientArrayList;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

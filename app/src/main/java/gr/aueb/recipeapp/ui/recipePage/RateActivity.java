@@ -14,7 +14,11 @@ import gr.aueb.recipeapp.domain.RatingLevel;
 import gr.aueb.recipeapp.ui.login.LoginActivity;
 import gr.aueb.recipeapp.ui.login.RegisterActivity;
 import gr.aueb.recipeapp.ui.search.IngredientSelectionActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RateActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -25,6 +29,10 @@ public class RateActivity extends AppCompatActivity {
     Button buttonConfirm;
     RatingLevel rate;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

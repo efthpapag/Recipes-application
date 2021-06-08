@@ -7,7 +7,11 @@ import org.junit.Test;
 import gr.aueb.recipeapp.dao.UserDao;
 
 import static org.junit.Assert.*;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class LoginPresenterTest {
 
     @Before

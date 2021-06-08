@@ -9,7 +9,11 @@ import gr.aueb.recipeapp.domain.Admin;
 import gr.aueb.recipeapp.domain.Ingredient;
 
 import static org.junit.Assert.*;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class IngredientManagementPresenterTest {
 
     private Admin a;

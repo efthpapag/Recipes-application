@@ -18,7 +18,11 @@ import gr.aueb.recipeapp.ui.userRecipes.RecipeManagementPresenter;
 import gr.aueb.recipeapp.ui.userRecipes.UserRecipesPresenter;
 
 import static org.junit.Assert.*;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RecipePagePresenterTest {
 
     private User user;

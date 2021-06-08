@@ -15,7 +15,11 @@ import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RecipeRecommendationsActivity extends AppCompatActivity{
 
     public static final String c = "course_type";
@@ -29,7 +33,10 @@ public class RecipeRecommendationsActivity extends AppCompatActivity{
     private RecipeRecommendationsAdapter mAdapter;
     Button btnAction1;
 
-
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

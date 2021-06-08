@@ -16,7 +16,11 @@ import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.ui.adminIngredient.EditIngredientActivity;
 import gr.aueb.recipeapp.ui.recipePage.RecipePageActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RecipeRecommendationsAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<Recipe> mArr;
@@ -24,6 +28,12 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
     public static final String r = "Recipe";
     String us;
 
+    /**
+     *
+     * @param context
+     * @param Arr
+     * @param us
+     */
     public RecipeRecommendationsAdapter(Context context, ArrayList<Recipe> Arr, String us) {
         super();
         mContext = context;
@@ -31,10 +41,21 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
         this.us = us;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCount() {
         return mArr.size();
     }
 
+    /**
+     *
+     * @param position
+     * @param view
+     * @param parent
+     * @return
+     */
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.one_button_list_item, parent, false);
@@ -58,10 +79,20 @@ public class RecipeRecommendationsAdapter extends BaseAdapter {
         return view;
     }
 
+    /**
+     *
+     * @param position
+     * @return
+     */
     public Object getItem(int position) {
         return position;
     }
 
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public long getItemId(int position) {
         return 0;

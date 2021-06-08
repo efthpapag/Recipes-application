@@ -9,7 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import gr.aueb.recipeapp.R;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class SearchActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -25,6 +29,10 @@ public class SearchActivity extends AppCompatActivity {
     String courseType = null;
     int time = -1;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

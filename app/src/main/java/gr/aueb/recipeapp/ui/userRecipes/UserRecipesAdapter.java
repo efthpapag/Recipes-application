@@ -12,7 +12,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.Recipe;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class UserRecipesAdapter extends BaseAdapter {
 
     public static final String un = "user";
@@ -23,16 +27,32 @@ public class UserRecipesAdapter extends BaseAdapter {
     String us;
     int id;
 
+    /**
+     *
+     * @param context
+     * @param Arr
+     */
     public UserRecipesAdapter(Context context, ArrayList<Recipe> Arr) {
         super();
         mContext = context;
         mArr = Arr;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCount() {
         return mArr.size();
     }
 
+    /**
+     *
+     * @param position
+     * @param view
+     * @param parent
+     * @return
+     */
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.two_button_list_item, parent, false);
@@ -70,10 +90,20 @@ public class UserRecipesAdapter extends BaseAdapter {
         return view;
     }
 
+    /**
+     *
+     * @param position
+     * @return
+     */
     public Object getItem(int position) {
         return position;
     }
 
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public long getItemId(int position) {
         return 0;

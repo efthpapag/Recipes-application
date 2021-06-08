@@ -20,16 +20,36 @@ import gr.aueb.recipeapp.domain.RatingLevel;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
 import gr.aueb.recipeapp.domain.User;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class UserDao {
 
     public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password"), new User("Mamalakis", "1234")}));
 
+    /**
+     *
+     * @param id
+     * @param name
+     * @param courseType
+     * @param prepTime
+     * @param portion
+     * @param steps
+     * @param ingredients
+     * @param user
+     */
     public void publish(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
         Recipe r = new Recipe( id, name, courseType, prepTime, portion, steps, ingredients, user);
         user.getRecipesPublished().add(r);
     }
 
+    /**
+     *
+     * @param user
+     * @param id
+     */
     public void remove(User user, int id){
         Iterator<Recipe> iter = user.getRecipesPublished().iterator();
         while (iter.hasNext()){
@@ -40,6 +60,17 @@ public class UserDao {
         }
     }
 
+    /**
+     *
+     * @param id
+     * @param name
+     * @param courseType
+     * @param prepTime
+     * @param portion
+     * @param steps
+     * @param ingredients
+     * @param user
+     */
     public void edit(int id, String name, CourseType courseType, int prepTime, int portion, String steps, ArrayList<RecipeIngredient> ingredients, User user){
         for (Recipe r : user.getRecipesPublished()){
             if (r.getId() == id){
@@ -49,6 +80,12 @@ public class UserDao {
         }
     }
 
+    /**
+     *
+     * @param user
+     * @param id
+     * @param level
+     */
     public void rate(User user, int id, RatingLevel level){
         for (Recipe r : RecipeDao.allRecipes){
             if (r.getId() == id){
@@ -58,19 +95,35 @@ public class UserDao {
         }
     }
 
+    /**
+     *
+     * @param r
+     * @param u
+     */
     public void addOnRead(Recipe r, User u){
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
         u.getRecipesRead().put(r.getId(), date);
     }
 
-
+    /**
+     *
+     * @param name
+     * @param password
+     * @return
+     */
     public static User accountCreation(String name, String password){
         User user = new User(name, password);
         allUsers.add(user);
         return user;
     }
 
+    /**
+     *
+     * @param name
+     * @param password
+     * @return
+     */
     public static User login(String name, String password){
         for (User u : allUsers){
             if (u.getUsername().equals(name) & u.getPassword().equals(password)){
@@ -80,6 +133,11 @@ public class UserDao {
         return null;
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public static User findUser(String name){
         for (User u : allUsers){
             if (u.getUsername().equals(name)){

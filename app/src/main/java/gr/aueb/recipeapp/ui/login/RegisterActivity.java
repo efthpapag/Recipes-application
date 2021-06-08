@@ -12,7 +12,11 @@ import android.widget.Toast;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.domain.User;
 import gr.aueb.recipeapp.ui.mainPage.UserMainPageActivity;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     EditText editUsername;
@@ -20,6 +24,10 @@ public class RegisterActivity extends AppCompatActivity {
     Button buttonRegister;
     public static final String un = "user";
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

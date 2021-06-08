@@ -8,16 +8,31 @@ import gr.aueb.recipeapp.domain.CourseType;
 import gr.aueb.recipeapp.domain.Recipe;
 import gr.aueb.recipeapp.domain.RecipeIngredient;
 import gr.aueb.recipeapp.domain.User;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class SearchPresenter {
 
     public UserDao userDao;
     public User user;
 
+    /**
+     *
+     * @param user
+     */
     SearchPresenter(User user){
         this.user = user;
     }
 
+    /**
+     *
+     * @param time
+     * @param availableIngredients
+     * @param courseType
+     * @return
+     */
     public ArrayList<Recipe> search(int time, ArrayList<RecipeIngredient> availableIngredients, CourseType courseType){
         ArrayList<Recipe> recommendations = new ArrayList<Recipe>();
         for(Recipe r : RecipeDao.allRecipes){

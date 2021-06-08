@@ -8,15 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.dao.RecipeDao;
 import gr.aueb.recipeapp.dao.UserDao;
 import gr.aueb.recipeapp.domain.Recipe;
-import gr.aueb.recipeapp.domain.User;
 import gr.aueb.recipeapp.ui.search.RecipeRecommendationsAdapter;
 
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class RecipePageActivity extends AppCompatActivity {
 
     public static final String un = "user";
@@ -31,6 +33,10 @@ public class RecipePageActivity extends AppCompatActivity {
     TextView courseType;
     TextView prepTime;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

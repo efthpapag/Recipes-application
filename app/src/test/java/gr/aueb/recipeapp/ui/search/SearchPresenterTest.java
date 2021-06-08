@@ -22,7 +22,11 @@ import gr.aueb.recipeapp.ui.recipePage.RecipePagePresenter;
 import gr.aueb.recipeapp.ui.userRecipes.RecipeManagementPresenter;
 
 import static org.junit.Assert.*;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class SearchPresenterTest {
 
     private User user;

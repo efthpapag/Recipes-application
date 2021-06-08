@@ -8,7 +8,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import gr.aueb.recipeapp.R;
 import gr.aueb.recipeapp.dao.IngredientDao;
-
+/**
+ * @author Ioannis Kakatsos
+ * @author Lampros-Stauros Koutsioukis
+ * @author Efthymios Papageorgiou
+ */
 public class IngredientManagementActivity extends AppCompatActivity {
 
     private ListView mListview;
@@ -16,6 +20,10 @@ public class IngredientManagementActivity extends AppCompatActivity {
     Button button;
     //public static final String un = "user";
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
