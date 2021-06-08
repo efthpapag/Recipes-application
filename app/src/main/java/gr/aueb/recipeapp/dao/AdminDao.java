@@ -14,7 +14,7 @@ import gr.aueb.recipeapp.domain.Ingredient;
  */
 public class AdminDao {
 
-    public static ArrayList<Admin> allAdmins = new ArrayList<Admin>(Arrays.asList(new Admin[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password")}));
+    public static ArrayList<Admin> allAdmins = new ArrayList<Admin>(Arrays.asList(new Admin[]{new Admin("username", "password")}));
 
 
 }

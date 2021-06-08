@@ -10,7 +10,7 @@ import gr.aueb.recipeapp.domain.User;
 public class IngredientDao {
 
 
-    public static ArrayList<Ingredient> allIngredients = new ArrayList<Ingredient>();
+    public static ArrayList<Ingredient> allIngredients = new ArrayList<Ingredient>(Arrays.asList(new Ingredient[]{new Ingredient("meli", 7), new Ingredient("moustarda", 9), new Ingredient("mprizola xoirini", 231)}));
 
     /**
      *adds ingredient to all Ingredients list

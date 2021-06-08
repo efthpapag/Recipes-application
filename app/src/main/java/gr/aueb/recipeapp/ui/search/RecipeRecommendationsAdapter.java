@@ -10,11 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
 import gr.aueb.recipeapp.R;
-import gr.aueb.recipeapp.domain.Ingredient;
 import gr.aueb.recipeapp.domain.Recipe;
-import gr.aueb.recipeapp.ui.adminIngredient.EditIngredientActivity;
 import gr.aueb.recipeapp.ui.recipePage.RecipePageActivity;
 /**
  * @author Ioannis Kakatsos

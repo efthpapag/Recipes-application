@@ -27,7 +27,7 @@ import gr.aueb.recipeapp.domain.User;
  */
 public class UserDao {
 
-    public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password"), new User("Mamalakis", "1234")}));
+    public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password")}));
 
     /**
      * publishs new recipe
