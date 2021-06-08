@@ -19,7 +19,7 @@ public class RecipeDao {
     /**
      *finds recipe by id
      * @param id
-     * @return
+     * @return the recipe the id belongs to else null
      */
     public Recipe find(int id){
         for (Recipe r : allRecipes){

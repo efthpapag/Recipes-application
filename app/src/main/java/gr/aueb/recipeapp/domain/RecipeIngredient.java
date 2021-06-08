@@ -10,7 +10,7 @@ public class RecipeIngredient {
     private Ingredient ingredientType;
 
     /**
-     *
+     *constructor of RecipeIngredient class
      * @param quantity
      * @param ingredientType
      */

@@ -14,7 +14,7 @@ public class Rating {
     private Recipe recipe;
 
     /**
-     *
+     *constructor of Rating class
      * @param rating
      * @param date
      * @param user

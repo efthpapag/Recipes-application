@@ -22,7 +22,7 @@ public class Recipe{
     private float totalCalories;
 
     /**
-     *
+     *constructor of Recipe class
      * @param id
      * @param name
      * @param courseType

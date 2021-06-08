@@ -12,7 +12,7 @@ public class Ingredient {
     private String editTextValue;
 
     /**
-     *
+     *constructor of Ingredient class
      * @param name
      * @param calories
      */
@@ -23,7 +23,7 @@ public class Ingredient {
 
     /**
      *
-     * @return
+     * @return 
      */
     public String getName() {
         return name;

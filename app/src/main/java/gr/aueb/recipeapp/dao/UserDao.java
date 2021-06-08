@@ -30,7 +30,7 @@ public class UserDao {
     public static ArrayList<User> allUsers = new ArrayList<User>(Arrays.asList(new User[]{new Admin("username", "password"), new Admin("Koytsioykiadis", "password"), new Admin("Kakatsinos", "password"), new Admin("Papaefthymiou", "password"), new User("Mamalakis", "1234")}));
 
     /**
-     *
+     * publishs new recipe
      * @param id
      * @param name
      * @param courseType
@@ -46,7 +46,7 @@ public class UserDao {
     }
 
     /**
-     *
+     * removes recipe from the app
      * @param user
      * @param id
      */
@@ -61,7 +61,7 @@ public class UserDao {
     }
 
     /**
-     *
+     *edits a recipe's parameters
      * @param id
      * @param name
      * @param courseType
@@ -81,7 +81,7 @@ public class UserDao {
     }
 
     /**
-     *
+     *updates a recipe's rating
      * @param user
      * @param id
      * @param level
@@ -96,7 +96,7 @@ public class UserDao {
     }
 
     /**
-     *
+     * adds a recipe on the list of read recipes of the user and the date when it was read
      * @param r
      * @param u
      */
@@ -107,10 +107,10 @@ public class UserDao {
     }
 
     /**
-     *
+     *creates new account for a new user
      * @param name
      * @param password
-     * @return
+     * @return the new user
      */
     public static User accountCreation(String name, String password){
         User user = new User(name, password);
@@ -119,10 +119,10 @@ public class UserDao {
     }
 
     /**
-     *
+     *checks if the credentials belong to a user
      * @param name
      * @param password
-     * @return
+     * @return the user with this credentials or null if the user does not exists
      */
     public static User login(String name, String password){
         for (User u : allUsers){
@@ -134,9 +134,9 @@ public class UserDao {
     }
 
     /**
-     *
+     *finds a user by username
      * @param name
-     * @return
+     * @return the user the name belongs to
      */
     public static User findUser(String name){
         for (User u : allUsers){

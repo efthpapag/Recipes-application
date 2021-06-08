@@ -19,7 +19,7 @@ public class User {
     private HashMap<Integer, Rating> ratings;
 
     /**
-     *
+     *constructor of User class
      * @param username
      * @param password
      */

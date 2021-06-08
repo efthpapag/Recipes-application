@@ -16,7 +16,7 @@ public class IngredientDao {
      *adds ingredient to all Ingredients list
      * @param Name
      * @param Calories
-     * @return
+     * @return the registered ingredient
      */
     public Ingredient registerIngredient(String Name, int Calories){
         Ingredient i = new Ingredient(Name, Calories);
@@ -42,7 +42,7 @@ public class IngredientDao {
     /**
      *finds ingredient by name
      * @param name
-     * @return
+     * @return the ingredient the name belongs to else null
      */
     public Ingredient findIngredient(String name){
         for (Ingredient i : allIngredients){
