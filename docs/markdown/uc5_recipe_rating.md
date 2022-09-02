@@ -1,10 +1,10 @@
-# ΠΧ5 Αξιολόγηση συνταγών 
-**Πρωτεύων Actor**: Χρήστης   
-**Ενδιαφερόμενοι**  
-**Χρήστης**: Θέλει να βαθμολογήσει μια συνταγή.  
-**Προϋποθέσεις**: Ο χρήστης έχει επιλέξει την συνταγή.  
-## Βασική Ροή
-1. O χρήστης πατάει την επιλογή “αξιολόγηση συνταγής”.
-2. Η εφαρμογή τον πηγαίνει σε μια νέα οθόνη.
-3. Ο χρήστης διαλέγει μια από της επιλογές “Θετικό”, “Αρνητικό” ή “Ουδέτερο”.
-4. Το σύστημα ανακατευθύνει τον χρήστη στη σελίδα της συνταγής.
+# UC5 Evaluating recipes
+**Primary Actor**: User
+**Interested**
+**User**: Wants to rate a recipe.
+**Conditions**: User has selected the recipe.
+## Basic Flow
+1. The user clicks on the "recipe evaluation" option.
+2. The app takes him to a new screen.
+3. The user chooses one of the options “Positive”, “Negative” or “Neutral”.
+4. The system redirects the user to the recipe page.

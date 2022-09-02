@@ -63,13 +63,3 @@
 ## Edit ingredient
 
 ![](uml/requirements/EditIngredientSequence.png)
-
-## Coverage Report R3
-
-![](app/coverage_reports/coverage_report.png)
-
-## Coverage Report R4
-
-![](app/coverage_reports/coverage_report_R4.png)
-
-

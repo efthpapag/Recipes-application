@@ -1,25 +1,25 @@
-# ΠΧ4 Αναζήτηση και παρουσίαση συνταγών 
-**Πρωτεύων Actor**: Χρήστης  
-**Ενδιαφερόμενοι**  
-**Χρήστης** : Θέλει να βρει συνταγές που ανταποκρίνονται στους περιορισμούς του.  
-**Προϋποθέσεις**: Ο χρήστης πρέπει να έχει συνδεθεί στην εφαρμογή με τον λογαριασμό του.  
-## Βασική Ροή
-1. Ο χρήστης πατάει την επιλογή “αναζήτηση συνταγών”.
-2. O χρήστης δηλώνει τα υλικα που διαθέτει,
-3. O χρήστης δηλώνει τον χρόνο που έχει διαθέσιμο.
-4. O χρήστης επιλεγεί τον τύπο του πιάτου από τις προκαθορισμένες επιλογές.
-5. Η εφαρμογή αποκλείει συνταγές οι οποίες δεν πληρούν τις προϋποθέσεις υλικών καθώς και τον το τύπο γεύματος.
-6. Αν υπάρχουν συνταγές που παίρνουν λιγότερο ή ίσο χρόνο με τον διαθέσιμο εμφανίζονται μόνο αυτές. 
-7. Οι συνταγές εμφανίζονται με σειρά προτεραιότητας με βάση τις προτιμήσεις του χρήστη και το πότε επιλέχθηκε η κάθε συνταγή  τελευταία φορά. 
-8. Ο χρήστης επιλέγει τη συνταγή που θέλει.
-9. Το σύστημα ανακατευθύνει τον χρήστη στη σελίδα της συνταγής.
+# UC4 Search and presentation of recipes
+**Primary Actor**: User
+**Interested**
+**User** : Wants to find recipes that meet his restrictions.
+**Conditions**: The user must be logged into the app with their account.
+## Basic Flow
+1. The user clicks on the “recipe search” option.
+2. The user declares the materials available,
+3. The user states the time he has available.
+4. The user selects the type of dish from the predefined options.
+5. The application excludes recipes that do not meet the material requirements as well as the type of meal.
+6. If there are recipes that take less or equal time than the available time, only those are displayed.
+7. Recipes are displayed in priority order based on user preferences and when each recipe was last selected.
+8. The user selects the recipe he wants.
+9. The system redirects the user to the recipe page.
+    
+**Alternative Streams**
 
-**Εναλλακτικές ροές**
-
-*6α Δεν υπάρχουν συνταγές που παίρνουν λιγότερο ή ίσο χρόνο με τον διαθέσιμο*
-1. Εμφανίζονται στον χρήστη άλλες συνταγές, καταταγμένες σε αύξουσα σειρά με βάση τον χρόνο που παίρνουν. 
-2. Σε περίπτωση ισοβαθμίας, θα λαμβάνονται υπόψη οι προτιμήσεις του χρήστη στη κατάταξη.
+*6a There are no recipes that take less or equal time than the available time*
+1. Other recipes are shown to the user, ranked in ascending order based on how long they take.
+2. In case of a tie, the user's preferences will be taken into account in the ranking.
 
 
-### Διάγραμμα δραστηριότητας
+### Activity chart
 ![](uml/requirements/search_activity_diagram.png)

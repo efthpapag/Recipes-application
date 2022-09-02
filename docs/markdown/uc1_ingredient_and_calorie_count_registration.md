@@ -1,30 +1,30 @@
-# ΠΧ1 Καταχώρηση υλικών και θερμιδικής αξίας   
-**Πρωτεύων Actor**: Διαχειριστής συστήματος  
-**Ενδιαφερόμενοι**  
-**Διαχειριστής συστήματος**: Θέλει να υποβάλει ή να διαγράψει ένα υλικό.  
-**Προϋποθέσεις**: Ο διαχειριστής θα πρέπει να γνωρίζει την θερμιδική αξία του κάθε υλικού και να έχει συνδεθεί σε λογαριασμό με δικαιώματα διαχειριστή.  
-## Βασική Ροή  
-### Α) Υποβολή νέου υλικού  
-1. Ο διαχειριστής μπαίνει στην κατάλληλη σελίδα οπού είναι αναγεγραμμένα τα υλικά.
-2. Το σύστημα του δείχνει το πίνακα 
-3. Ο διαχειριστής πατάει τη επιλογή “Προσθήκη”
-4. Το σύστημα τον πηγαίνει σε μια νέα οθόνη οπού συμπληρώνει το όνομα του υλικού και την θερμιδική αξία του.
-5. Ο διαχειριστής επιβεβαιώνει την υποβολή του νέου υλικού.
-6. Το νέο υλικό αποθηκεύεται στο πίνακα.  
+# UC1 Registration of materials and calorific value
+**Primary Actor**: System Administrator
+**Interested**
+**System Admin**: Wants to submit or delete a material.
+**Conditions**: The administrator should know the calorific value of each material and be logged into an account with administrator rights.
+## Basic Flow
+### A) Submission of new material
+1. The administrator enters the appropriate page where the materials are listed.
+2. The system shows him the table
+3. The administrator clicks the “Add” option
+4. The system takes him to a new screen where he fills in the name of the material and its calorific value.
+5. The administrator confirms the submission of the new material.
+6. The new material is saved to the table.
 
-**Εναλλακτικές ροές**  
+**Alternative Streams**
 
-*5α Ο διαχειριστής δεν αποθηκεύσει το νέο υλικό.*  
-1. Το νέο υλικό δεν αποθηκεύεται στο πίνακα.  
+*5a The administrator does not save the new material.*
+1. New material is not stored in the table.
 
-### Β) Διαγραφή υλικού   
+### B) Delete Material
 
-1. Ο διαχειριστής μπαίνει στην κατάλληλη σελίδα οπού είναι αναγεγραμμένα τα υλικά.
-2. Το σύστημα του δείχνει το πίνακα 
-3. Ο διαχειριστής πατάει τη επιλογή “Διαγραφή”
-4. Ο διαχειριστής επιβεβαιώνει την διαγραφή του νέου υλικού.
-5. Το νέο υλικό διαγράφεται από πίνακα.  
+1. The administrator enters the appropriate page where the materials are listed.
+2. The system shows him the table
+3. The administrator presses the “Delete” option
+4. The administrator confirms the deletion of the new material.
+5. New material is deleted from table.
 
-**Εναλλακτικές ροές**  
-*4α Ο διαχειριστής δεν αποθηκεύσει το νέο υλικό.*  
-1. Το υλικό παραμένει αποθηκευμένο στο πίνακα.	
+**Alternative Streams**
+*4a The administrator does not save the new material.*
+1. The material remains stored in the table.

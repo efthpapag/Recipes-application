@@ -1,59 +1,59 @@
-# ΠΧ6 Διαχείριση συνταγών
-**Πρωτεύων Actor**: Χρήστης   
-**Ενδιαφερόμενοι**  
-**Χρήστης**: Θέλει να υποβάλει ή να διαγράψει ή να επεξεργαστεί τις συνταγές.  
-**Προϋποθέσεις**: Ο χρήστης πρέπει να έχει συνδεθεί στην εφαρμογή με τον λογαριασμό του.  
-## Βασική Ροή
+# UC6 Management of recipes
+**Primary Actor**: User
+**Interested**
+**User**: Wants to submit or delete or edit recipes.
+**Conditions**: The user must be logged into the app with their account.
+## Basic Flow
 
-### Α) Υποβολή νέα συνταγής.
+### A) Submission of a new prescription.
 
-1. Ο χρήστης πηγαίνει στην σελίδα διαχείρισης συνταγών.
-2. Η εφαρμογή εμφανίζει τον πίνακα όπου ο χρήστης μπορεί να δει τις συνταγές που έχει ήδη υποβάλει.
-3. Ο χρήστης πατάει την επιλογή “υποβολή νέας συνταγής”.
-4. Η εφαρμογή στέλνει τον χρήστη στην σελίδα συμπλήρωσης στοιχείων συνταγής.
-5. Ο χρήστης δηλώνει το όνομα, τα υλικα τα οποία περιλαμβάνει η συνταγή, τον χρόνο ολοκλήρωσης της, τις μερίδες οι οποίες προκύπτουν από αυτές τις αναλογίες υλικών, το είδος γεύματος και τα βήματα εκτέλεσης της συνταγής.
-6. Ο χρήστης επιβεβαιώνει την υποβολή της συνταγής.
-7. Η συνταγή προστίθενται στην εφαρμογή.
+1. The user goes to the recipe management page.
+2. The application displays the table where the user can see the recipes he has already submitted.
+3. The user presses the "submit new prescription" option.
+4. The application sends the user to the prescription information filling page.
+5. The user states the name, the ingredients included in the recipe, the time of its completion, the portions that result from these proportions of ingredients, the type of meal and the steps to execute the recipe.
+6. The user confirms the submission of the prescription.
+7. The recipe is added to the application.
 
-**Εναλλακτικές ροές**  
+**Alternative Streams**
 
-*5α Η εφαρμογή δεν δέχεται κάποιο πεδίο.*
-1. Ο χρήστης δεν συμπληρώνει κάποιο πεδίο ή το συμπληρώνει λάθος.
-2. Η εφαρμογή τον ενημερώνει κατάλληλα.
-*6α Ο χρήστης δεν ολοκληρώνει την δήλωση της συνταγής.*
-1. Ο χρήστης δεν ολοκληρώνει την δήλωση της συνταγής.
+*5a The application does not accept a field.*
+1. The user does not fill in a field or fills it in incorrectly.
+2. The application informs him accordingly.
+*6a The user does not complete the prescription declaration.*
+1. The user does not complete the prescription statement.
 
-### Β) Διαγραφή συνταγής.
+### B) Delete prescription.
 
-1. 1 Ο χρήστης πηγαίνει στην σελίδα διαχείρισης συνταγών.
-2. Η εφαρμογή εμφανίζει τον πίνακα όπου ο χρήστης μπορεί να δει τις συνταγές που έχει ήδη υποβάλει.
-3. Ο χρήστης πατάει την επιλογή “Διαγραφή”.
-4. Ο χρήστης επιβεβαιώνει την διαγραφή της συνταγής.
-5. Η συνταγή διαγράφεται από την εφαρμογή.
+1. 1 The user goes to the recipe management page.
+2. The application displays the table where the user can see the recipes he has already submitted.
+3. The user presses the “Delete” option.
+4. The user confirms the deletion of the recipe.
+5. The prescription is deleted from the application.
 
-**Εναλλακτικές ροές**
+**Alternative Streams**
 
-*4α Ο χρήστης δεν ολοκληρώνει την διαγραφή της συνταγής.*
-1. Ο χρήστης δεν ολοκληρώνει την διαγραφή της συνταγής.
+*4a The user does not complete the deletion of the prescription.*
+1. The user does not complete the prescription deletion.
 
-### Γ) Επεξεργασία συνταγής. 
+### C) Edit recipe.
 
-1.  Ο χρήστης πηγαίνει στην σελίδα διαχείρισης συνταγών.
-2. Η εφαρμογή εμφανίζει τον πίνακα όπου ο χρήστης μπορεί να δει τις συνταγές που έχει ήδη υποβάλει.
-3. Ο χρήστης πατάει την επιλογή “ Επεξεργασία συνταγής ”
-4. Η εφαρμογή στέλνει τον χρήστη στην σελίδα συμπλήρωσης στοιχείων συνταγής.
-5. Ο χρήστης δηλώνει το όνομα, τα υλικα τα οποία περιλαμβάνει η συνταγή, τον χρόνο ολοκλήρωσης της, τις μερίδες οι οποίες προκύπτουν από αυτές τις αναλογίες υλικών, το είδος γεύματος και τα βήματα εκτέλεσης της συνταγής.
-6. Ο χρήστης επιβεβαιώνει την υποβολή της συνταγής.
-7. Η συνταγή προστίθενται στην εφαρμογή.  
+1. The user goes to the recipe management page.
+2. The application displays the table where the user can see the recipes he has already submitted.
+3. The user taps the “Edit Recipe” option
+4. The application sends the user to the prescription information filling page.
+5. The user states the name, the ingredients included in the recipe, the time of its completion, the portions that result from these proportions of ingredients, the type of meal and the steps to execute the recipe.
+6. The user confirms the submission of the prescription.
+7. The recipe is added to the application.
 
-**Εναλλακτικές ροές**  
+**Alternative Streams**
 
-*5α Η εφαρμογή δεν δέχεται κάποιο πεδίο.*  
-1. Ο χρήστης δεν συμπληρώνει κάποιο πεδίο ή το συμπληρώνει λάθος.
-2. Η εφαρμογή τον ενημερώνει κατάλληλα.  
-*6α Ο χρήστης δεν ολοκληρώνει την επεξεργασία της συνταγής.*
-1. Ο χρήστης δεν ολοκληρώνει την επεξεργασία της συνταγής.
+*5a The application does not accept a field.*
+1. The user does not fill in a field or fills it in incorrectly.
+2. The application informs him accordingly.
+*6a The user does not complete the processing of the recipe.*
+1. The user does not complete the processing of the recipe.
 
 
-### Διάγραμμα δραστηριότητας
+### Activity chart
 ![](uml/requirements/recipe_management_activity_diagram.png)

@@ -1,27 +1,24 @@
-# ΠΧ2 Δημιουργία λογαριασμού
-**Πρωτεύων Actor**: Χρήστης   
-**Ενδιαφερόμενοι**  
-**Χρήστης**: Θέλει να δημιουργήσει νέο λογαριασμό  
-**Προϋποθέσεις**: Ο χρήστης έχει εγκαταστήσει και ενεργοποιήσει την εφαρμογή.  
-## Βασική Ροή
-1. Ο χρήστης επιλεγεί την δημιουργία νέου λογαριασμού. 
-2. Συμπληρώνει το όνομα χρήστη και κωδικό στα κατάλληλα πεδία. 
-3. Αποδέχεται τους όρους της εφαρμογής. 
-4. Επιβεβαιώνει την εγγραφή του.
-5. Το σύστημα εμφανίζει στο χρήστη την αρχική σελίδα του προφίλ του.
+# UC2 Create an account
+**Primary Actor**: User
+**Interested**
+**User**: Wants to create a new account
+**Requirements**: User has installed and activated the application.
+## Basic Flow
+1. The user has chosen to create a new account.
+2. Fill in the username and password in the appropriate fields.
+3. Accept the terms of the application.
+4. Confirms his registration.
+5. The system shows the user the home page of his profile.
 
-**Εναλλακτικές ροές**
+**Alternative Streams**
 
-*2α Τα στοιχεία του χρήστη απορρίπτονται*
-1. Τα στοιχεία του χρήστη απορρίπτονται.
-2. Η εφαρμογή τον ενημερώνει καταλληλά.  
+*2a The user's details are rejected*
+1. User data is rejected.
+2. The application informs him accordingly.
 
-*4α Ο χρήστης δεν ολοκληρώνει την δημιουργία νέου λογαριασμού*
-1. Η εφαρμογή επιστρέφει τον χρήστη στην αρχική σελίδα.
+*4a The user does not complete the creation of a new account*
+1. The application returns the user to the home page.
 
 
-### Διάγραμμα δραστηριότητας
+### Activity chart
 ![](uml/requirements/account_creation_activity_diagram.png)
-
-
-
